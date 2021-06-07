@@ -22,6 +22,6 @@ Description: "Administrative information about a citizen receiving social servic
 * managingOrganization.reference ..0
 * managingOrganization.type ..0
 * managingOrganization.identifier 1..1
-// * managingOrganization.identifier only dk-core-sor-identifier    TODO: Identifier?
+// * managingOrganization.identifier only dk-core-sor-identifier    TODO: Identifier to use?
 * managingOrganization.display ..0
 * link ..0
