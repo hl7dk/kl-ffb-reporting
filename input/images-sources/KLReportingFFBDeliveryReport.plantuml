@@ -1,0 +1,31 @@
+@startuml DeliveryReport
+
+rectangle "DeliveryReport" as report
+
+rectangle "Citizen" as citizen
+rectangle "ServiceRequest" as request
+rectangle "CarePlan" as careplan
+rectangle "InformationGathering" as information
+
+rectangle "Condition" as condition
+rectangle "Evaluation" as evaluation
+rectangle "Goal" as goal
+rectangle "Intervention" as intervention
+rectangle "CareTeam" as team
+rectangle "Organization" as organization
+
+report -- citizen
+report -- request
+report -- careplan
+
+request "basedon"<-- information
+careplan -->"goal *" goal
+careplan "basedon"<-- intervention
+careplan -->"careTeam" team
+team -->"participant" organization
+
+information -->"finding *" condition
+information -->"investigation *" evaluation
+goal -->"addresses *" condition
+
+@enduml
