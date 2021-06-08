@@ -5,13 +5,15 @@ rectangle "DeliveryReport" as report
 rectangle "Citizen" as citizen
 rectangle "ServiceRequest" as request
 rectangle "CarePlan" as careplan
-rectangle "InformationGathering" as information
 
-rectangle "Condition" as condition
-rectangle "Evaluation" as evaluation
-rectangle "Goal" as goal
+rectangle "InformationGathering" as information
+rectangle "InterventionGoal" as goal
+rectangle "TargetGroup" as targetgroup
 rectangle "Intervention" as intervention
-rectangle "CareTeam" as team
+rectangle "ServicePerformer" as team
+
+rectangle "NeedOfSupport" as evaluation
+rectangle "Condition" as condition
 rectangle "Organization" as organization
 
 report -- citizen
@@ -20,8 +22,9 @@ report -- careplan
 
 request "basedon"<-- information
 careplan -->"goal *" goal
+careplan -->"addresses *" targetgroup
 careplan "basedon"<-- intervention
-careplan -->"careTeam" team
+careplan -->"careteam" team
 team -->"participant" organization
 
 information -->"finding *" condition

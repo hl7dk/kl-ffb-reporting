@@ -1,6 +1,6 @@
 Profile: KLReportingFFBDeliveryReport
 Parent: Bundle
-Id: kl-reporting-ffb--delivery-report
+Id: kl-reporting-ffb--deliveryReport
 Title: "DeliveryReport"
 Description: "Deliver report to deliver for each citizen."
 * identifier ..0
@@ -11,7 +11,17 @@ Description: "Deliver report to deliver for each citizen."
 * entry.resource 1..1
 * entry.resource only
     KLReportingFFBCitizen or
-    KLReportingFFBCarePlan
+    KLReportingFFBServiceRequest or
+    KLReportingFFBCarePlan or
+    KLReportingFFBInformationGathering or 
+    KLReportingFFBInterventionGoal or
+    KLReportingFFBTargetGroup or
+    KLReportingFFBIntervention or
+    KLReportingFFBServicePerformer or
+    KLReportingFFBInterventionPurpose or
+    KLReportingFFBNeedOfSupport or
+    KLReportingFFBCondition or
+    KLReportingFFBOrganization
 * entry.resource ^short = "Content constrained to known profiles"
 * entry.search ..0
 * entry.request ..0
