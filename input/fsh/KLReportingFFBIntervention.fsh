@@ -1,5 +1,5 @@
 Profile: KLReportingFFBIntervention
-Parent: http://kl.dk/fhir/common/caresocial/StructureDefinition/KLCommonCareSocialPlannedIntervention
+Parent: CarePlan
 Id: kl-reporting-ffb-intervention
 Title: "Intervention"
 Description: "Intervention in a reported care plan"
@@ -9,14 +9,27 @@ Description: "Intervention in a reported care plan"
 * intent MS
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* author ..0
 * created MS
 * period MS
 * activity MS
-* activity.detail 1.. MS
-* activity.detail.code 1.. MS
-// * activity.detail.code.coding ^slicing.discriminator[0].type = #value
-// * activity.detail.code.coding ^slicing.discriminator[0].path = "system"
-// * activity.detail.code.coding ^slicing.rules = #open
-* activity.detail.code.coding[FFBintervention] MS
-* activity.detail.code.coding[FFBintervention] from http://kl.dk/fhir/common/caresocial/ValueSet/KLInterventionsFFB
+* activity.detail 1..1 MS
+* activity.detail.code 1..1 MS
+* activity.detail.code.coding 1..1 MS
+* activity.detail.code.coding from KLInterventionsFFB
 * activity.detail.status MS
+* activity.detail.goal ..1 MS
+* activity.detail.goal only Reference(KLReportingFFBInterventionGoal)
+
+//shorts
+* activity.detail.code.coding ^short = "[DK] indsatsskode"
+* created ^short = "[DK] indsatsoprettelsestid"
+* period.start ^short = "[DK] indsatsbevillingstid"
+* period.end ^short = "[DK] indsatsafslutningstid"
+* status ^short = "[DK] indsatsstatus"
+* intent ^short = "[DK] indsatshensigt"
+* subject ^short = "[DK] indsatssubjekt"
+* activity.detail.performer ^short = "[DK] indsatsleverandør"
+* basedOn ^short = "[DK] indsatsDelAfPlan"
+* activity.detail.goal ^short = "[DK] indsatsmål"
+* activity.detail.status ^short = "[DK] indsatsAktivitetsstatus"

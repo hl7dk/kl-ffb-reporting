@@ -7,13 +7,13 @@ rectangle "ServiceRequest" as request
 rectangle "CarePlan" as careplan
 
 rectangle "InformationGathering" as information
-rectangle "InterventionGoal" as goal
+rectangle "CarePlanEvaluation" as careplanevaluation
 rectangle "TargetGroup" as targetgroup
 rectangle "Intervention" as intervention
 rectangle "ServicePerformer" as team
 
-rectangle "NeedOfSupport" as evaluation
 rectangle "Condition" as condition
+rectangle "InterventionGoal" as goal
 rectangle "Organization" as organization
 
 report -- citizen
@@ -21,14 +21,16 @@ report -- request
 report -- careplan
 
 request "basedon"<-- information
-careplan -->"goal *" goal
+' careplan -->"goal *" goal
+careplan -->"outcome" careplanevaluation
 careplan -->"addresses *" targetgroup
 careplan "basedon"<-- intervention
 careplan -->"careteam" team
 team -->"participant" organization
 
 information -->"finding *" condition
-information -->"investigation *" evaluation
-goal -->"addresses *" condition
+condition "addresses"<- goal
+
+intervention -->"goal" goal
 
 @enduml

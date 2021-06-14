@@ -18,8 +18,7 @@ Description: "Deliver report to deliver for each citizen."
     KLReportingFFBTargetGroup or
     KLReportingFFBIntervention or
     KLReportingFFBServicePerformer or
-    KLReportingFFBInterventionPurpose or
-    KLReportingFFBNeedOfSupport or
+    KLReportingFFBCarePlanEvaluation or
     KLReportingFFBCondition or
     KLReportingFFBOrganization
 * entry.resource ^short = "Content constrained to known profiles"

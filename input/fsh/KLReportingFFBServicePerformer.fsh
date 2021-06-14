@@ -1,5 +1,5 @@
 Profile: KLReportingFFBServicePerformer
-Parent: http://kl.dk/fhir/common/caresocial/StructureDefinition/KLCommonServicePerformer
+Parent: CareTeam
 Id: kl-reporting-ffb-servicePerformer
 Title: "ServicePerformer"
 Description: "ServicePerformer team"
