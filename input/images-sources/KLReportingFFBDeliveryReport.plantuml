@@ -26,10 +26,12 @@ careplan -->"outcome" careplanevaluation
 careplan -->"addresses *" targetgroup
 careplan "basedon"<-- intervention
 careplan -->"careteam" team
-team -->"participant" organization
+team -->"participant *" organization
 
 information -->"finding *" condition
 condition "addresses"<- goal
+
+intervention -->"performer *" organization
 
 intervention -->"goal" goal
 

@@ -3,18 +3,38 @@ Parent: ClinicalImpression
 Id: kl-reporting-ffb-informationGathering
 Title: "InformationGathering"
 Description: "Assessment of the citizen"
-* finding MS
-* finding.itemReference MS
-* finding.itemReference only Reference(KLReportingFFBCondition)
-* investigation ..0
+* implicitRules ..0
+* language ..0
+* contained ..0
+* extension contains BasedOnServiceRequest named basedOnServiceRequest 1..1 MS
+* extension[basedOnServiceRequest].valueReference only Reference(KLCommonCareSocialServiceRequest)
+* extension ^slicing.rules = #closed
+* modifierExtension ..0
+* identifier ..0
+* status MS
+* statusReason ..0
+* code ..0
+* description ..0
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* encounter ..0
+* effective[x] MS
+* effective[x] only dateTime
+* date ..0
+* assessor ..0
+* previous ..0
+* problem ..0
+* protocol ..0
+* summary ..0
+* finding MS
+* finding.itemCodeableConcept ..0
+* finding.extension ..0
+* finding.modifierExtension ..0
+* finding.itemReference MS
+* finding.itemReference only Reference(KLReportingFFBCondition)
+* finding.basis ..0
+* investigation ..0
 
-
-* code ..0
-// * effective[x] only dateTime
-* extension contains BasedOnServiceRequest named basedOnServiceRequest 1..1
-* extension[basedOnServiceRequest].valueReference only Reference(KLCommonCareSocialServiceRequest)
 
 * code.coding ^short = "[DK] oplysningsaktivitetstype"
 * subject ^short = "[DK] oplysningsaktivitetsubjekt"
