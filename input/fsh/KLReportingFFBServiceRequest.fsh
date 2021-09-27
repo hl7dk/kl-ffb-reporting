@@ -7,7 +7,7 @@ Description: "ServiceRequest leading to the gathering of information"
 * language ..0
 * contained ..0
 * extension contains
-    MunicipalityCaseNumber named municipalityCaseNumber 0..1 MS
+    KLReportingFFBMunicipalityCaseNumber named municipalityCaseNumber 0..1 MS
 * extension ^slicing.rules = #closed
 * modifierExtension ..0
 * instantiatesCanonical ..0
@@ -27,6 +27,7 @@ Description: "ServiceRequest leading to the gathering of information"
 * quantity[x] ..0
 * subject MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 * encounter ..0
 * occurrence[x] ..0
 * asNeeded[x] ..0

@@ -1,5 +1,5 @@
 Profile: KLReportingFFBCitizen
-Parent: http://kl.dk/fhir/common/caresocial/StructureDefinition/KLCommonCitizen
+Parent: Patient
 Id: kl-reporting-ffb-citizen
 Title: "Citizen"
 Description: "Administrative information about a citizen receiving social services."
@@ -17,7 +17,6 @@ Description: "Administrative information about a citizen receiving social servic
 * photo ..0
 * contact ..0
 * communication ..0
-* generalPractitioner[referencedSORUnit] ..0
 * generalPractitioner ..0
 * managingOrganization 1..1
 * managingOrganization.reference ..0

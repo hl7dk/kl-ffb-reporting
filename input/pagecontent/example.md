@@ -37,7 +37,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen and the service request.
 
-TODO: link
+The report for this is found here: [DeliveryReport-1st-Encounter](Bundle-4b4e5f33-a9a2-42f6-b598-180543029ae5.html)
 
 ### 2nd encounter / Second documentation phase – Case insight
 

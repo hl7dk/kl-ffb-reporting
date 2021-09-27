@@ -7,7 +7,8 @@ Description: "Assessment of the citizen"
 * language ..0
 * contained ..0
 * extension contains BasedOnServiceRequest named basedOnServiceRequest 1..1 MS
-* extension[basedOnServiceRequest].valueReference only Reference(KLCommonCareSocialServiceRequest)
+* extension[basedOnServiceRequest].valueReference only Reference(KLReportingFFBServiceRequest)
+* extension[basedOnServiceRequest].valueReference ^type.aggregation = #bundled
 * extension ^slicing.rules = #closed
 * modifierExtension ..0
 * identifier ..0
@@ -17,6 +18,7 @@ Description: "Assessment of the citizen"
 * description ..0
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 * encounter ..0
 * effective[x] MS
 * effective[x] only dateTime
@@ -32,6 +34,7 @@ Description: "Assessment of the citizen"
 * finding.modifierExtension ..0
 * finding.itemReference MS
 * finding.itemReference only Reference(KLReportingFFBCondition)
+* finding.itemReference ^type.aggregation = #bundled
 * finding.basis ..0
 * investigation ..0
 
