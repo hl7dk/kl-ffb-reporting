@@ -10,7 +10,6 @@ rectangle "InformationGathering" as information
 rectangle "CarePlanEvaluation" as careplanevaluation
 rectangle "TargetGroup" as targetgroup
 rectangle "Intervention" as intervention
-rectangle "ServicePerformer" as team
 
 rectangle "Condition" as condition
 rectangle "InterventionGoal" as goal
@@ -25,8 +24,6 @@ request "basedon"<-- information
 careplan -->"outcome" careplanevaluation
 careplan -->"addresses *" targetgroup
 careplan "basedon"<-- intervention
-careplan -->"careteam" team
-team -->"participant *" organization
 
 information -->"finding *" condition
 condition "addresses"<- goal

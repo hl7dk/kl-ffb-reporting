@@ -8,6 +8,8 @@ Description: "Goal related to an intervention for a citizen"
 * category 1..1 MS
 * category from KLGoalTypeCodes
 * category = $KLCommon#0bb3daef-538d-45dc-b444-abdbcb63f6bc "FFB indsatsmål"
+* description.coding 1..1
+* description.coding = $snomedCT#410518001
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
 * target MS

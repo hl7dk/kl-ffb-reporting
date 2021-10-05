@@ -5,10 +5,12 @@ Title: "Intervention"
 Description: "Intervention in a reported care plan"
 * basedOn 1.. MS
 * basedOn only Reference(KLReportingFFBCarePlan)
+* basedOn ^type.aggregation = #bundled
 * status MS
 * intent MS
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 * author ..0
 * created MS
 * period MS
@@ -20,6 +22,10 @@ Description: "Intervention in a reported care plan"
 * activity.detail.status MS
 * activity.detail.goal ..1 MS
 * activity.detail.goal only Reference(KLReportingFFBInterventionGoal)
+* activity.detail.goal ^type.aggregation = #bundled
+* activity.detail.performer MS
+* activity.detail.performer only Reference(KLReportingFFBOrganization)
+* activity.detail.performer ^type.aggregation = #bundled
 
 //shorts
 * activity.detail.code.coding ^short = "[DK] indsatsskode"

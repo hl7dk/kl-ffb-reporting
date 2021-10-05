@@ -8,6 +8,7 @@ Description: "Støttebehovsvurdering"
 * code.coding = $KLCommon#effe55c7-572c-4a99-8fb4-2a9dda2f6572 "FFB støttebehovsvurdering"
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept.coding from KLNeedsAssessmentCodesFFB //kun for støttebehov

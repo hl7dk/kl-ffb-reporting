@@ -37,7 +37,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen and the service request.
 
-The report for this is found here: [DeliveryReport-1st-Encounter](Bundle-4b4e5f33-a9a2-42f6-b598-180543029ae5.html)
+The report for this is found here: [DeliveryReport-1st-Encounter](Bundle-1ef32e7e-ec7c-40e7-9fb9-82b78ff9d91b.html)
 
 ### 2nd encounter / Second documentation phase – Case insight
 
@@ -80,7 +80,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen and the conditions.
 
-TODO: link
+The report for this is found here: [DeliveryReport-2nd-Encounter](Bundle-498644ca-b26c-4ba7-a1ef-69d691297ba3.html)
 
 ### 3rd encounter / Third documentation phase – Case assesment
 
@@ -97,6 +97,10 @@ Efter udformningen af mål for støtten vurderer visiterende myndighedssagsbehan
 Her sammenholder den visiterende myndighedssagsbehandler informationer fra de foregående faser med graden af støtte der er nødvendig for at Børge Mogensen kan nå sine opsatte mål.
 Det vurderes at Børge har et let støttebehov (værdi 1), da det ikke er nødvendigt med omfattende støtte for at kunne nå sin tid.
 Der knyttes et lokalt sagsafgørelsesID til vurderingen af støttebehov, da denne kan være forskellig pr. individuel oprettet sag.
+
+##### Spørgsmål
+
+- Gang og bevægelse samt forstå meddelelser er nye. Giver det mening med et mål for et tema som ikke er vurderet?
 
 #### FSB Documentation
 The following FSB documentation is documented in the record system.
@@ -134,7 +138,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen, the care plan, the care plan evaluation, and the intervention goal.
 
-TODO: link
+The report for this is found here: [DeliveryReport-3rd-Encounter](Bundle-4b4e5f33-a9a2-42f6-b598-180543029ae5.html)
 
 ### 4th encounter / Fourth documentation phase – Case verdict
 
@@ -175,7 +179,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen and the target groups.
 
-TODO: link
+The report for this is found here: [DeliveryReport-4th-Encounter](Bundle-4e1f8c3c-4d24-4a00-be8f-814df58a2a28.html)
 
 ### 5th encounter / Fifth documentation phase – Case appropriation
 
@@ -185,6 +189,10 @@ Den første sociale indsats sammensætter hun så det botilbudslignende tilbud S
 Der bevilges ligeledes en social indsats hvor dagtilbuddet til voksne; måneskinnet bestilles til at arbejde med ydelsen ”social aktivitet”.
 Begge indsatser kobles til den oprindelige afgørelse med et sagsafgørelsesID.
 Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, og et brev til Børge.
+
+##### Spørgsmål
+
+- Hvilke mål skal udpeges af de tre indsatser?
 
 #### FSB Documentation
 The following FSB documentation is documented in the record system.
@@ -216,7 +224,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen, the interventions, and the organizations.
 
-TODO: link
+The report for this is found here: [DeliveryReport-5th-Encounter](Bundle-5bf6a186-ee66-4b0e-ba6e-623972ab5130.html)
 
 ### 6th encounter / Sixth documentation phase – Case delivery
 
@@ -270,7 +278,7 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen, the condition, the interventions, the organization, and the intervention goal.
 
-TODO: link
+The report for this is found here: [DeliveryReport-6th-Encounter](Bundle-aaa5d153-968e-46ec-9f9e-cfc6e93a3f1b.html)
 
 ### 7th encounter / Seventh documentation phase – Case evaluation
 
@@ -283,9 +291,9 @@ De to indsatser på hhv. aktivitets- og samværstilbuddet og det botilbudslignen
 
 ##### Spørgsmål
 
-- Hvor er datoen for den planlagte sagsopfølgning dokumenteret?
-- Hvad skal der ske med de tidligere vurderede temaer ?
-- Hvorfor dokumenteres der funktinosevneniveau på "Personer i Netværk"?
+- Hvor er datoen for den planlagte sagsopfølgning dokumenteret? (Har valgt den 30/8)
+- Skal målgrupperne fjernes?
+- Hvorfor dokumenteres der funktionsevneniveau på "Personer i Netværk"?
 
 #### FSB Documentation
 The following FSB documentation is documented in the record system.
@@ -297,42 +305,21 @@ The following FSB documentation is documented in the record system.
 | ---------- |
 | 01011981-4321 |
 
-##### Condition
-
-{:class="grid"}
-| Condition group | Condition | Severity | Recorded date | Last asserted date |
-| --------------- | --------- | -------- | ------------- | ------------------ |
-| Funktioner og forhold | Bevidsthedstilstand ??? | - | 28/5-2021 | - |
-|  | Intellektuelle funktioner ??? | - | 28/5-2021 | - |
-|  | Problemløsning ??? | - | 28/5-2021 | - |
-|  | Syn ??? | - | 28/5-2021 | - |
-|  | Døgnrytme ??? | - | 28/5-2021 | - |
-|  | Tobak ??? | - | 28/5-2021 | - |
-|  | Interesser ??? | - | 28/5-2021 | - |
-|  | Familiesituation ??? | - | 28/5-2021 | - |
-| Omgivelsesfaktorer | Boligområde | - | 28/5-2021 | - |
-|  | Personer i netværk | 2 - Moderat nedsat funktionsevne ???? | 28/5-2021 | ??? |
-| Aktivitet og deltagelse | Indgå i samspil og kontakt | 0 - Ingen nedsat funktionsevne | 28/5-2021 | ??? |
-|  | Varetage beskæftigelse ??? | 1 - Let nedsat funktionsevne | 28/5-2021 | - |
-|  | Spise | 3 - Svært nedsat funktionsevne | 28/5-2021 | ??? |
-|  | Købe ind | 2 - Moderat nedsat funktionsevne | 28/5-2021 | ??? |
-|  | Færdes med transportmidler | 3 - Svært nedsat funktionsevne | 28/5-2021 | ??? |
-
 ##### CarePlanEvaluation
 
 {:class="grid"}
 | Evaluation | Vurderingsdato |
 | ---------- | -------------- |
-| 0 - Let støttebehov | 29/5-2021 ??? |
+| 0 - Intet støttebehov | 30/8-2021 |
 
 ##### Intervention
 
 {:class="grid"}
 | Intervention | Start date | End date | Recorded date | Performer |
 | ------------ | ---------- | -------- | ------------- | --------- |
-| Kompetenceudviklende aktivitet | 18/6-2021 | ??? | 29/5-2021 | Måneskinnet |
-| Støtte til daglige opgaver i hjemmet | 29/5-2021 | ??? | 29/5-2021 | Solstrålen |
-| Støtte til sund levevis | 29/5-2021 | ??? | 29/5-2021 | Solstrålen |
+| Kompetenceudviklende aktivitet | 18/6-2021 | 30/8-2021 | 29/5-2021 | Måneskinnet |
+| Støtte til daglige opgaver i hjemmet | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
+| Støtte til sund levevis | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
 
 ##### Organization
 
@@ -345,4 +332,4 @@ The following FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing the citizen. the conditions, the care plan evaluation, the interventions, and the organizations.
 
-TODO: link
+The report for this is found here: [DeliveryReport-7th-Encounter](Bundle-ae9cdbef-ca35-4dae-b5df-ffd938cf0098.html)

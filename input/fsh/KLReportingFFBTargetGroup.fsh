@@ -8,6 +8,7 @@ Description: "Target group of a citizen"
 * code.coding from KLConditionsAndTargetGroupsFFB (required)
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 
 * code.coding ^short = "[DK] tværorganisatoriskTilstandskode"
 * code.text ^short = "[DK] tværorganisatoriskTilstandsvurdering"

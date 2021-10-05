@@ -1,4 +1,5 @@
 Extension: KLReportingFFBMunicipalityCaseNumber
+Id: kl-reporting-ffb-municipalityCaseNumber
 Title: "MunicipalityCasenumber"
 Description: "Extension for municipality case numbers"
 * extension contains

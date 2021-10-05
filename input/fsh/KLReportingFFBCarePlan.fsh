@@ -3,25 +3,28 @@ Parent: CarePlan
 Id: kl-reporting-ffb-carePlan
 Title: "CarePlan"
 Description: "FFB care plan"
-* extension contains MunicipalityCaseNumber named municipalityCaseNumber 1..1
+* extension contains KLReportingFFBMunicipalityCaseNumber named municipalityCaseNumber 1..1
 * status MS
 * intent MS
 * category ..0
 * description ..0
 * goal MS
 * goal only Reference(KLReportingFFBInterventionGoal)
+* goal ^type.aggregation = #bundled
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)
+* subject ^type.aggregation = #bundled
 * author ..0
 * period MS
 * created ..0
-* careTeam MS
-* careTeam only Reference(KLReportingFFBServicePerformer)
-* addresses 1.. MS
+* careTeam ..0
+* addresses 0.. MS
 * addresses.extension contains ConditionRank named conditionRank 1..1
 * addresses only Reference(KLReportingFFBTargetGroup)
-* activity 1..1
+* addresses ^type.aggregation = #bundled
+* activity 0..1
 * activity.outcomeReference only Reference(KLReportingFFBCarePlanEvaluation)
+* activity.outcomeReference ^type.aggregation = #bundled
 
 * category.coding ^short = "[DK] indsatsforløbKategori"
 * description ^short = "[DK] indsatsforløbBeskrivelse" 
