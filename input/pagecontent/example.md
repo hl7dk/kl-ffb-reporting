@@ -35,7 +35,12 @@ The following FSB documentation is documented in the record system.
 | Sag154689 |
 
 #### Reporting
-A delivery report is generated containing the citizen and the service request.
+A delivery report is generated containing:
+
+- Citizen (new)
+- Information gathering (new)
+    - Reference to service request
+- Service request (new)
 
 The report for this is found here: [DeliveryReport-1st-Encounter](Bundle-1ef32e7e-ec7c-40e7-9fb9-82b78ff9d91b.html)
 
@@ -47,14 +52,7 @@ Visitator udarbejder udredningen på baggrund af samtale med Børge Mogensen og 
 Ved udredning af Børge Mogensens aktivitets- og deltagelsestemaer vurderer og registrerer visiterende myndighedssagsbehandler Børge Mogensens funktionsevneniveau på en skala mellem 0-4.
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### Condition
 
@@ -78,7 +76,14 @@ The following FSB documentation is documented in the record system.
 |  | Færdes med transportmidler | 3 - Svært nedsat funktionsevne | 28/5-2021 | - |
 
 #### Reporting
-A delivery report is generated containing the citizen and the conditions.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Information gathering (updated)
+    - Reference to service request (unchanged)
+    - Reference to conditions (new)
+- Service request (unchanged)
+- Conditions (new)
 
 The report for this is found here: [DeliveryReport-2nd-Encounter](Bundle-498644ca-b26c-4ba7-a1ef-69d691297ba3.html)
 
@@ -103,14 +108,7 @@ Der knyttes et lokalt sagsafgørelsesID til vurderingen af støttebehov, da denn
 - Gang og bevægelse samt forstå meddelelser er nye. Giver det mening med et mål for et tema som ikke er vurderet?
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### CarePlan
 
@@ -136,7 +134,19 @@ The following FSB documentation is documented in the record system.
 | Spise | - | 3 - Svært nedsat funktionsevne | Begrænse tab af funktionsevne |
 
 #### Reporting
-A delivery report is generated containing the citizen, the care plan, the care plan evaluation, and the intervention goal.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Information gathering (unchanged)
+    - Reference to service request (unchanged)
+    - Reference to conditions (unchanged)
+- Care plan (new)
+    - Reference to care plan evaluation
+- Care plan evaluation (new)
+- Intervention goals (new)
+    - Reference to conditions
+- Service request (unchanged)
+- Conditions (unchanged)
 
 The report for this is found here: [DeliveryReport-3rd-Encounter](Bundle-4b4e5f33-a9a2-42f6-b598-180543029ae5.html)
 
@@ -158,14 +168,7 @@ Disse kan være varierende på tværs af sager.
 
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### TargetGroup
 
@@ -177,7 +180,14 @@ The following FSB documentation is documented in the record system.
 | Selvmordstanker eller -forsøg | 29-5-2021 |
 
 #### Reporting
-A delivery report is generated containing the citizen and the target groups.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Care plan (updated)
+    - Reference to care plan evaluation (unchanged)
+    - Reference to target groups (new)
+- Care plan evaluation (unchanged)
+- Target groups (new)
 
 The report for this is found here: [DeliveryReport-4th-Encounter](Bundle-4e1f8c3c-4d24-4a00-be8f-814df58a2a28.html)
 
@@ -195,14 +205,7 @@ Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, 
 - Hvilke mål skal udpeges af de tre indsatser?
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### Intervention
 
@@ -222,7 +225,16 @@ The following FSB documentation is documented in the record system.
 | Måneskinnet | 12312320 | 58112210 | Påskeløkken 32B, 1212 Viborg NØ |
 
 #### Reporting
-A delivery report is generated containing the citizen, the interventions, and the organizations.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Care plan (unchanged)
+    - Reference to care plan evaluation (unchanged)
+    - Reference to target groups (unchanged)
+- Interventions (new)
+    - Reference to care plan
+    - Reference to organization
+- Organizations (new)
 
 The report for this is found here: [DeliveryReport-5th-Encounter](Bundle-5bf6a186-ee66-4b0e-ba6e-623972ab5130.html)
 
@@ -237,21 +249,14 @@ Samtidigt opdaterer den visiterende myndighedssagsbehandler aktivitets- og delta
 Den socialpædagogiske medarbejder udformer journalnotater på Børges Funktioner & Forhold, Omgivelser og Aktivitets- og deltagelsestemaer.
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### Condition
 
 {:class="grid"}
 | Condition group | Condition | Severity | Recorded date | Last asserted date |
 | --------------- | --------- | -------- | ------------- | ------------------ |
-| Aktivitet og deltagelse | Indgå i samspil og kontakt | 1 - Let nedsat funktionsevne | 18/6-2021 | - |
+| Aktivitet og deltagelse | Indgå i samspil og kontakt | 1 - Let nedsat funktionsevne | 28/5-2021 | 18/6-2021 |
 
 ##### Intervention
 
@@ -261,13 +266,6 @@ The following FSB documentation is documented in the record system.
 | Social aktivitet | 29/5-2021 | 18/6-2021 | 29/5-2021 | Måneskinnet |
 | Kompetenceudviklende aktivitet | 18/6-2021 | - | 29/5-2021 | Måneskinnet |
 
-##### Organization
-
-{:class="grid"}
-| Organization | Identifier (CVR) | Identifier (PNr) | Address |
-| ------------ | ---------------- | ---------------- | ------- |
-| Måneskinnet | 12312320 | 58112210 | Påskeløkken 32B, 1212 Viborg NØ |
-
 ##### InterventionGoal
 
 {:class="grid"}
@@ -276,7 +274,24 @@ The following FSB documentation is documented in the record system.
 | Indgå i samspil og kontakt | Varetage beskæftigelse; Færdes med transportmidler | 0 - Ingen nedsat funktionsevne | Udvikle funktionsevne |
 
 #### Reporting
-A delivery report is generated containing the citizen, the condition, the interventions, the organization, and the intervention goal.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Information gathering (unchanged)
+    - Reference to service request (unchanged)
+    - Reference to the conditions (unchanged)
+- Care plan (unchanged)
+    - Reference to care plan evaluation (unchanged)
+    - Reference to target groups (unchanged)
+- Interventions (one new and one updated)
+    - Reference to the care plan
+    - Reference to the intervention goal
+    - Reference to the organizations
+- Intervention goals (one new)
+    - Reference to conditions
+- Service request (unchanged)
+- Conditions (one is updated)
+- Organization (unchanged)
 
 The report for this is found here: [DeliveryReport-6th-Encounter](Bundle-aaa5d153-968e-46ec-9f9e-cfc6e93a3f1b.html)
 
@@ -296,14 +311,7 @@ De to indsatser på hhv. aktivitets- og samværstilbuddet og det botilbudslignen
 - Hvorfor dokumenteres der funktionsevneniveau på "Personer i Netværk"?
 
 #### FSB Documentation
-The following FSB documentation is documented in the record system.
-
-##### Citizen
-
-{:class="grid"}
-| Identifier |
-| ---------- |
-| 01011981-4321 |
+The following new FSB documentation is documented in the record system.
 
 ##### CarePlanEvaluation
 
@@ -321,15 +329,16 @@ The following FSB documentation is documented in the record system.
 | Støtte til daglige opgaver i hjemmet | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
 | Støtte til sund levevis | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
 
-##### Organization
-
-{:class="grid"}
-| Organization | Identifier (CVR) | Identifier (PNr) | Address |
-| ------------ | ---------------- | ---------------- | ------- |
-| Solstrålen | 12312315 | 58193210 | Brymmelev 14, 5480 Viborg SV |
-| Måneskinnet | 12312320 | 58112210 | Påskeløkken 32B, 1212 Viborg NØ |
-
 #### Reporting
-A delivery report is generated containing the citizen. the conditions, the care plan evaluation, the interventions, and the organizations.
+A delivery report is generated containing:
+
+- Citizen (unchanged)
+- Information gathering (new)
+    - Reference to service request
+- Care plan (updated)
+    - Reference to new care plan evaluation (updated)
+- Service request (unchanged)
+- Interventions (updated)
+- Organizations (unchanged)
 
 The report for this is found here: [DeliveryReport-7th-Encounter](Bundle-ae9cdbef-ca35-4dae-b5df-ffd938cf0098.html)
