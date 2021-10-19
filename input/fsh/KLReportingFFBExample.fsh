@@ -478,26 +478,64 @@ Description: "5th encounter / Fifth documentation phase – Case appropriation"
 * insert ConditionEntry(18045390-e599-4b7a-95f2-287f41146975) // Anden fysisk funktionsnedsættelse
 * insert ConditionEntry(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
 * insert ObservationEntry(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
-* insert OrganizationEntry(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
-* insert OrganizationEntry(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 * insert CarePlanEntry(6ef8bead-fb42-4dbe-919f-e4a1f94135e2) // Støtte til daglige opgaver i hjemmet
 * insert CarePlanEntry(b4ec722a-3cb4-4e9d-8a3b-58ebdb329361) // Støtte til sund levevis
 * insert CarePlanEntry(e9374e0c-fea8-48d5-a545-6f893d527e98) // Social aktivitet
-* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v2)
+* insert CareTeamEntry(31a46e2d-0d54-4600-8ecb-1b239749cfd1) // Almindeligt længerevarende botilbud til voksne
+* insert CareTeamEntry(9f4982de-34fd-440b-9980-fa72b51673eb) // Aktivitets- og samværstilbud
+* insert EncounterEntry(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
+* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v3)
 
-// --- Organizations -------------------------------------------------------------------------------------------------
-
-Instance: 189c0c85-1542-475f-92fd-0133f7db4796
-InstanceOf: KLReportingFFBOrganization
-Description: "Solstrålen"
+// --- CareTeams -----------------------------------------------------------------------------------------------------
+Instance: 31a46e2d-0d54-4600-8ecb-1b239749cfd1
+InstanceOf: KLReportingFFBServicePerformer
+Description: "Almindeligt længerevarende botilbud til voksne"
 Usage: #inline
-* name = "Solstrålen"
+* category = $KLFFB#498fe92c-d7f7-41cd-9404-5b38fe113be0 // Almindeligt længerevarende botilbud til voksne
+* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 
-Instance: f2e85203-fa78-4ce4-b1ff-10ce8b647c95
-InstanceOf: KLReportingFFBOrganization
-Description: "Måneskinnet"
+Instance: 9f4982de-34fd-440b-9980-fa72b51673eb
+InstanceOf: KLReportingFFBServicePerformer
+Description: "Aktivitets- og samværstilbud"
 Usage: #inline
-* name = "Måneskinnet"
+* category = $KLFFB#9401777d-bdc5-4f52-9804-63c8cae9a792 // Aktivitets- og samværstilbud
+* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+
+// --- CarePlan ------------------------------------------------------------------------------------------------------
+
+Instance: 944c7c24-37b4-455e-9319-cd9f35a7aec9-v3 // Fake id
+InstanceOf: KLReportingFFBCarePlan
+Description: "Børge Mogensen - Care Plan"
+Usage: #inline
+* id = "944c7c24-37b4-455e-9319-cd9f35a7aec9" // Real id
+* extension[municipalityCaseNumber].extension[municipalitySpecific].valueIdentifier
+  * system = "http://example.dk/identifier/case"
+  * value = "Sag154689"
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
+* status = $requestStatus#active
+* intent = $requestIntent#order
+* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* careTeam[+] = Reference(31a46e2d-0d54-4600-8ecb-1b239749cfd1) // Almindeligt længerevarende botilbud til voksne
+* careTeam[+] = Reference(9f4982de-34fd-440b-9980-fa72b51673eb) // Aktivitets- og samværstilbud
+* addresses[+] = Reference(76cecdcc-321c-479f-ae95-a8f020541650) // Anden udviklingsforstyrrelse
+* addresses[=].extension[ConditionRank].valuePositiveInt = 1
+* addresses[+] = Reference(18045390-e599-4b7a-95f2-287f41146975) // Anden fysisk funktionsnedsættelse
+* addresses[=].extension[ConditionRank].valuePositiveInt = 2
+* addresses[+] = Reference(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
+* addresses[=].extension[ConditionRank].valuePositiveInt = 2
+* activity.outcomeReference = Reference(213d0504-1a41-4330-b9a0-347d3ba4bb2a)
+
+// --- FollowUpEncounter ---------------------------------------------------------------------------------------------
+
+Instance: ef6a3536-ecaa-49c5-ace1-53e19acb4cd1
+InstanceOf: KLReportingFFBFollowUpEncounter
+Description: "Opfølgning på Børge Mogensen"
+Usage: #inline
+* status = #planned
+* class = $v3ActCode#HH
+* type.coding = $KLCommon#9f03dfbb-7a97-45a5-94db-d4c3501714a9
+* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* period.start = 2021-08-29
 
 // --- Interventions -------------------------------------------------------------------------------------------------
 
@@ -505,6 +543,7 @@ Instance: 6ef8bead-fb42-4dbe-919f-e4a1f94135e2
 InstanceOf: KLReportingFFBIntervention
 Description: "Støtte til daglige opgaver i hjemmet"
 Usage: #inline
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -513,12 +552,12 @@ Usage: #inline
 * period.start = 2021-05-29T16:10:23Z
 * activity.detail.code = $KLFFB#638f44df-6bf2-47f8-9935-b8fdc83e5bf5
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
 
 Instance: b4ec722a-3cb4-4e9d-8a3b-58ebdb329361
 InstanceOf: KLReportingFFBIntervention
 Description: "Støtte til sund levevis"
 Usage: #inline
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -527,12 +566,12 @@ Usage: #inline
 * period.start = 2021-05-29T16:10:23Z
 * activity.detail.code = $KLFFB#3c1639d0-e486-43c6-8add-448b8aff4b8f
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
 
 Instance: e9374e0c-fea8-48d5-a545-6f893d527e98
 InstanceOf: KLReportingFFBIntervention
 Description: "Social aktivitet"
 Usage: #inline
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -541,7 +580,7 @@ Usage: #inline
 * period.start = 2021-05-29T16:10:23Z
 * activity.detail.code = $KLFFB#7e419926-bb04-4829-99c9-95ea20403c2c
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
+
 
 // ===================================================================================================================
 // 6th Encounter
@@ -576,10 +615,12 @@ Description: "6th encounter / Sixth documentation phase – Case delivery"
 * insert ConditionEntry(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
 * insert ObservationEntry(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
 * insert GoalEntry(76b9d91b-4b28-4c4a-944c-aa16b8cca82c) // Udvikle - Indgå i samspil og kontakt
-* insert OrganizationEntry(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 * insert CarePlanEntryVersion(e9374e0c-fea8-48d5-a545-6f893d527e98, v2) // Social aktivitet
 * insert CarePlanEntry(629c659a-8be2-44e9-a852-3efa2d95f856) // Kompetenceudviklende aktivitet
-* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v2)
+* insert CareTeamEntry(31a46e2d-0d54-4600-8ecb-1b239749cfd1) // Almindeligt længerevarende botilbud til voksne
+* insert CareTeamEntry(9f4982de-34fd-440b-9980-fa72b51673eb) // Aktivitets- og samværstilbud
+* insert EncounterEntry(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
+* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v3)
 
 // --- Conditions -----------------------------------------------------------------------------------------------------
 
@@ -623,6 +664,7 @@ Instance: e9374e0c-fea8-48d5-a545-6f893d527e98-v2 // Fake id
 InstanceOf: KLReportingFFBIntervention
 Description: "Social aktivitet"
 Usage: #inline
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * id = "e9374e0c-fea8-48d5-a545-6f893d527e98" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
@@ -633,12 +675,12 @@ Usage: #inline
 * period.end = 2021-06-18
 * activity.detail.code = $KLFFB#7e419926-bb04-4829-99c9-95ea20403c2c
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 
 Instance: 629c659a-8be2-44e9-a852-3efa2d95f856
 InstanceOf: KLReportingFFBIntervention
 Description: "Kompetenceudviklende aktivitet"
 Usage: #inline
+* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -647,7 +689,6 @@ Usage: #inline
 * period.start = 2021-06-18
 * activity.detail.code = $KLFFB#f25674bf-3162-45c3-bde4-6d542bf9629b
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 
 // ===================================================================================================================
 // 7th Encounter
@@ -662,13 +703,11 @@ Description: "7th encounter / Seventh documentation phase – Case evaluation"
 * insert CitizenEntry(da16c0a1-840a-46b0-98b3-761e4501b343)
 * insert ServiceRequestEntry(9947191b-270a-4f64-9b05-8be29e7f5c58)
 * insert ClinicalImpressionEntry(753cbc43-8364-45be-9c21-cdb345e227ef)
-* insert OrganizationEntry(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
-* insert OrganizationEntry(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 * insert CarePlanEntryVersion(6ef8bead-fb42-4dbe-919f-e4a1f94135e2, v2) // Støtte til daglige opgaver i hjemmet
 * insert CarePlanEntryVersion(b4ec722a-3cb4-4e9d-8a3b-58ebdb329361, v2) // Støtte til sund levevis
 * insert CarePlanEntryVersion(629c659a-8be2-44e9-a852-3efa2d95f856, v2) // Kompetenceudviklende aktivitet
 * insert ObservationEntry(e548c437-05e2-43d9-836f-5d3b4f8e331f) // Intet støttebehov
-* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v3)
+* insert CarePlanEntryVersion(944c7c24-37b4-455e-9319-cd9f35a7aec9, v4)
 
 // --- InformationGathering ------------------------------------------------------------------------------------------
 
@@ -697,7 +736,6 @@ Usage: #inline
 * period.end = 2021-08-30
 * activity.detail.code = $KLFFB#638f44df-6bf2-47f8-9935-b8fdc83e5bf5
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
 
 Instance: b4ec722a-3cb4-4e9d-8a3b-58ebdb329361-v2 // Fake id
 InstanceOf: KLReportingFFBIntervention
@@ -713,7 +751,6 @@ Usage: #inline
 * period.end = 2021-08-30
 * activity.detail.code = $KLFFB#3c1639d0-e486-43c6-8add-448b8aff4b8f
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(189c0c85-1542-475f-92fd-0133f7db4796) // Solstrålen
 
 Instance: 629c659a-8be2-44e9-a852-3efa2d95f856-v2 // Fake id
 InstanceOf: KLReportingFFBIntervention
@@ -729,7 +766,6 @@ Usage: #inline
 * period.end = 2021-08-30
 * activity.detail.code = $KLFFB#f25674bf-3162-45c3-bde4-6d542bf9629b
 * activity.detail.status = $carePlanActivityStatus#in-progress
-* activity.detail.performer = Reference(f2e85203-fa78-4ce4-b1ff-10ce8b647c95) // Måneskinnet
 
 // --- CarePlanEvaluation --------------------------------------------------------------------------------------------
 
@@ -745,7 +781,7 @@ Usage: #inline
 
 // --- CarePlan ------------------------------------------------------------------------------------------------------
 
-Instance: 944c7c24-37b4-455e-9319-cd9f35a7aec9-v3 // Fake id
+Instance: 944c7c24-37b4-455e-9319-cd9f35a7aec9-v4 // Fake id
 InstanceOf: KLReportingFFBCarePlan
 Description: "Børge Mogensen - Care Plan"
 Usage: #inline
@@ -753,7 +789,7 @@ Usage: #inline
 * extension[municipalityCaseNumber].extension[municipalitySpecific].valueIdentifier
   * system = "http://example.dk/identifier/case"
   * value = "Sag154689"
-* status = $requestStatus#active
-* intent = $requestIntent#plan
+* status = $requestStatus#completed
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * activity.outcomeReference = Reference(e548c437-05e2-43d9-836f-5d3b4f8e331f)

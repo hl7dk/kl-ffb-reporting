@@ -41,6 +41,10 @@ RuleSet: ObservationEntry(instance)
 * entry[+].fullUrl = "Observation/{instance}"
 * entry[=].resource = {instance}
 
-RuleSet: OrganizationEntry(instance)
-* entry[+].fullUrl = "Organization/{instance}"
+RuleSet: CareTeamEntry(instance)
+* entry[+].fullUrl = "CareTeam/{instance}"
+* entry[=].resource = {instance}
+
+RuleSet: EncounterEntry(instance)
+* entry[+].fullUrl = "Encounter/{instance}"
 * entry[=].resource = {instance}

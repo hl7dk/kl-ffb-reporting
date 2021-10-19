@@ -15,7 +15,8 @@ Description: "Deliver report to deliver for each citizen."
     KLReportingFFBInformationGathering or 
     KLReportingFFBInterventionGoal or
     KLReportingFFBCarePlanEvaluation or
-    KLReportingFFBOrganization or
+    KLReportingFFBServicePerformer or
+    KLReportingFFBFollowUpEncounter or
     CarePlan or // (KLReportingFFBCarePlan or KLReportingFFBIntervention)
     Condition // (KLReportingFFBCondition or KLReportingFFBTargetGroup)
 * entry.resource ^short = "Content constrained to known profiles (see also constraint kl-reporting-ffb-delivery-report-1 and kl-reporting-ffb-delivery-report-2)"
@@ -24,6 +25,7 @@ Description: "Deliver report to deliver for each citizen."
 * entry.response ..0
 * signature ..0
 * obeys kl-reporting-ffb-delivery-report-1
+* obeys kl-reporting-ffb-delivery-report-2
 
 Invariant: kl-reporting-ffb-delivery-report-1
 Description: "All Conditon resources shall conform to either kl-reporting-ffb-condition or kl-reporting-ffb-targetGroup profile"

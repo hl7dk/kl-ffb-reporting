@@ -8,3 +8,4 @@ Alias: $conditionVerStatus = http://terminology.hl7.org/CodeSystem/condition-ver
 Alias: $goalStatus = http://hl7.org/fhir/goal-status
 Alias: $observationStatus = http://hl7.org/fhir/observation-status
 Alias: $carePlanActivityStatus = http://hl7.org/fhir/care-plan-activity-status
+Alias: $v3ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode

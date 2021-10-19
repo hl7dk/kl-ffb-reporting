@@ -207,34 +207,36 @@ Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, 
 #### FSB Documentation
 The following new FSB documentation is documented in the record system.
 
+##### ServicePerformer
+{:class="grid"}
+| Category | 
+| ------------ |
+| Almindeligt længerevarende botilbud til voksne |
+| Aktivitets- og samværstilbud |
+
 ##### Intervention
 
 {:class="grid"}
-| Intervention | Start date | End date | Recorded date | Performer |
+| Intervention | Start date | End date | Recorded date |
 | ------------ | ---------- | -------- | ------------- | --------- |
-| Støtte til daglige opgaver i hjemmet | 29/5-2021 | - | 29/5-2021 | Solstrålen |
-| Støtte til sund levevis | 29/5-2021 | - | 29/5-2021 | Solstrålen |
-| Sociale aktivitet | 29/5-2021 | - | 29/5-2021 | Måneskinnet |
-
-##### Organization
-
-{:class="grid"}
-| Organization | Identifier (CVR) | Identifier (PNr) | Address |
-| ------------ | ---------------- | ---------------- | ------- |
-| Solstrålen | 12312315 | 58193210 | Brymmelev 14, 5480 Viborg SV |
-| Måneskinnet | 12312320 | 58112210 | Påskeløkken 32B, 1212 Viborg NØ |
+| Støtte til daglige opgaver i hjemmet | 29/5-2021 | - | 29/5-2021 |
+| Støtte til sund levevis | 29/5-2021 | - | 29/5-2021 |
+| Sociale aktivitet | 29/5-2021 | - | 29/5-2021 |
 
 #### Reporting
 A delivery report is generated containing:
 
 - Citizen (unchanged)
-- Care plan (unchanged)
+- Care plan (updated)
     - Reference to care plan evaluation (unchanged)
     - Reference to target groups (unchanged)
+    - Reference to service performers (new)
+    - Reference to follow-up encounter (new)
 - Interventions (new)
     - Reference to care plan
-    - Reference to organization
-- Organizations (new)
+- Target groups (unchanged)
+- Service performers (new)
+- Follow-up encounter (new)
 
 The report for this is found here: [DeliveryReport-5th-Encounter](Bundle-5bf6a186-ee66-4b0e-ba6e-623972ab5130.html)
 
@@ -261,10 +263,10 @@ The following new FSB documentation is documented in the record system.
 ##### Intervention
 
 {:class="grid"}
-| Intervention | Start date | End date | Recorded date | Performer |
-| ------------ | ---------- | -------- | ------------- | --------- |
-| Social aktivitet | 29/5-2021 | 18/6-2021 | 29/5-2021 | Måneskinnet |
-| Kompetenceudviklende aktivitet | 18/6-2021 | - | 29/5-2021 | Måneskinnet |
+| Intervention | Start date | End date | Recorded date |
+| ------------ | ---------- | -------- | ------------- |
+| Social aktivitet | 29/5-2021 | 18/6-2021 | 29/5-2021 |
+| Kompetenceudviklende aktivitet | 18/6-2021 | - | 29/5-2021 |
 
 ##### InterventionGoal
 
@@ -283,15 +285,17 @@ A delivery report is generated containing:
 - Care plan (unchanged)
     - Reference to care plan evaluation (unchanged)
     - Reference to target groups (unchanged)
+    - Reference to service performers (unchanged)
+    - Reference to follow-up encounter (unchanged)
 - Interventions (one new and one updated)
     - Reference to the care plan
     - Reference to the intervention goal
-    - Reference to the organizations
 - Intervention goals (one new)
     - Reference to conditions
 - Service request (unchanged)
 - Conditions (one is updated)
-- Organization (unchanged)
+- Service performers (unchanged)
+- Follow-up encounter (unchanged)
 
 The report for this is found here: [DeliveryReport-6th-Encounter](Bundle-aaa5d153-968e-46ec-9f9e-cfc6e93a3f1b.html)
 
@@ -323,11 +327,11 @@ The following new FSB documentation is documented in the record system.
 ##### Intervention
 
 {:class="grid"}
-| Intervention | Start date | End date | Recorded date | Performer |
-| ------------ | ---------- | -------- | ------------- | --------- |
-| Kompetenceudviklende aktivitet | 18/6-2021 | 30/8-2021 | 29/5-2021 | Måneskinnet |
-| Støtte til daglige opgaver i hjemmet | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
-| Støtte til sund levevis | 29/5-2021 | 30/8-2021 | 29/5-2021 | Solstrålen |
+| Intervention | Start date | End date | Recorded date |
+| ------------ | ---------- | -------- | ------------- |
+| Kompetenceudviklende aktivitet | 18/6-2021 | 30/8-2021 | 29/5-2021 |
+| Støtte til daglige opgaver i hjemmet | 29/5-2021 | 30/8-2021 | 29/5-2021 |
+| Støtte til sund levevis | 29/5-2021 | 30/8-2021 | 29/5-2021 |
 
 #### Reporting
 A delivery report is generated containing:
@@ -339,6 +343,5 @@ A delivery report is generated containing:
     - Reference to new care plan evaluation (updated)
 - Service request (unchanged)
 - Interventions (updated)
-- Organizations (unchanged)
 
 The report for this is found here: [DeliveryReport-7th-Encounter](Bundle-ae9cdbef-ca35-4dae-b5df-ffd938cf0098.html)
