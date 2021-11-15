@@ -36,6 +36,7 @@ Description: "Condition according to FFB"
 * stage ..0
 * evidence ..0
 * note ..0
+* obeys kl-reporting-ffb-condition-1
 
 //Specifying danish descriptions
 * code ^short = "[DK] tilstandskode"
@@ -59,3 +60,9 @@ Description: "Condition according to FFB"
 * evidence.detail SU
 * category.coding SU
 * extension[conditionLastAssertedDate] SU
+
+Invariant: kl-reporting-ffb-condition-1
+Description: "Severity is mandatory for condition codes of 'Aktivitet og Deltagelse' and not allowed for other condition codes"
+Severity: #error
+Expression: "(severity.exists() and code.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionADCodesFFB')) or
+    (severity.exists().not() and code.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionADCodesFFB').not())"
