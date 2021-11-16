@@ -27,7 +27,7 @@ report -- citizen
 report --"*" request
 report --"*" careplan
 
-information ->"finding *" condition
+information -->"finding *" condition
 
 request "basedon"<-- information
 careplan -->"goal *\n" goal

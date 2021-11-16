@@ -17,7 +17,7 @@ Børge drømmer om en tilværelse hvor han kan blive ved med at fungere i hverda
 
 Visiterende sagsbehandler starter sagen med at indhente diagnoseoplysninger på Børge, og kan se at der ikke foreligger nogle gældende lægefaglige diagnoser på Børge.
 
-#### FSB Documentation
+#### FFB Documentation
 The following FSB documentation is documented in the record system.
 
 ##### Citizen
@@ -51,7 +51,7 @@ Visiterende myndighedssagsbehandler udformer, efter sagsåbningen, en objektiv o
 Visitator udarbejder udredningen på baggrund af samtale med Børge Mogensen og pårørende, samt journalnotater fra tidligere kontakter med kommunen.
 Ved udredning af Børge Mogensens aktivitets- og deltagelsestemaer vurderer og registrerer visiterende myndighedssagsbehandler Børge Mogensens funktionsevneniveau på en skala mellem 0-4.
 
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### Condition
@@ -103,11 +103,7 @@ Her sammenholder den visiterende myndighedssagsbehandler informationer fra de fo
 Det vurderes at Børge har et let støttebehov (værdi 1), da det ikke er nødvendigt med omfattende støtte for at kunne nå sin tid.
 Der knyttes et lokalt sagsafgørelsesID til vurderingen af støttebehov, da denne kan være forskellig pr. individuel oprettet sag.
 
-##### Spørgsmål
-
-- Gang og bevægelse samt forstå meddelelser er nye. Giver det mening med et mål for et tema som ikke er vurderet?
-
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### CarePlan
@@ -162,12 +158,7 @@ Børge har ligeledes givet udtryk for at have sporadiske selvmordstanker, hvorfo
 Der knyttes et sagsafgørelsesID til registreringen af målgrupper, da det kun er de for sagen relevante målgrupper der registreres på Børge Mogensens sag.
 Disse kan være varierende på tværs af sager.
 
-##### Spørgsmål
-
-- Hvad betyder det at afkrydse på laveste niveau?
-
-
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### TargetGroup
@@ -200,17 +191,14 @@ Der bevilges ligeledes en social indsats hvor dagtilbuddet til voksne; måneskin
 Begge indsatser kobles til den oprindelige afgørelse med et sagsafgørelsesID.
 Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, og et brev til Børge.
 
-##### Spørgsmål
-
-- Hvilke mål skal udpeges af de tre indsatser?
-
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### ServicePerformer
+
 {:class="grid"}
-| Category | 
-| ------------ |
+| Category |
+| -------- |
 | Almindeligt længerevarende botilbud til voksne |
 | Aktivitets- og samværstilbud |
 
@@ -218,7 +206,7 @@ The following new FSB documentation is documented in the record system.
 
 {:class="grid"}
 | Intervention | Start date | End date | Recorded date |
-| ------------ | ---------- | -------- | ------------- | --------- |
+| ------------ | ---------- | -------- | ------------- |
 | Støtte til daglige opgaver i hjemmet | 29/5-2021 | - | 29/5-2021 |
 | Støtte til sund levevis | 29/5-2021 | - | 29/5-2021 |
 | Sociale aktivitet | 29/5-2021 | - | 29/5-2021 |
@@ -240,7 +228,7 @@ A delivery report is generated containing:
 
 The report for this is found here: [DeliveryReport-5th-Encounter](Bundle-5bf6a186-ee66-4b0e-ba6e-623972ab5130.html)
 
-### 6th encounter / Sixth documentation phase – Case delivery
+### 6th encounter / Sixth documentation phase – Changing case appropriation
 
 #### Story
 Efter Børge er startet op på hans indsatser, deltager han i den første af de månedligt tilbagevende statusser, hvor han og en socialpædagogisk medarbejder vender arbejdet med indsatsmålene og hans generelle trivsel.
@@ -250,7 +238,7 @@ Samtidigt opdaterer den visiterende myndighedssagsbehandler aktivitets- og delta
 
 Den socialpædagogiske medarbejder udformer journalnotater på Børges Funktioner & Forhold, Omgivelser og Aktivitets- og deltagelsestemaer.
 
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### Condition
@@ -299,7 +287,7 @@ A delivery report is generated containing:
 
 The report for this is found here: [DeliveryReport-6th-Encounter](Bundle-aaa5d153-968e-46ec-9f9e-cfc6e93a3f1b.html)
 
-### 7th encounter / Seventh documentation phase – Case evaluation
+### 7th encounter / Seventh documentation phase – Case closing
 
 #### Story
 Visiterende myndighedssagsbehandler laver på ny en udredning af Børge Mogensen under den planlagte sagsopfølgning.
@@ -308,13 +296,7 @@ Det særlige fokus for sagsbehandler er hhv. ”indgå i samspil og kontakt”, 
 Sagsbehandler vurderer ligeledes at Børge Mogensen ikke længere har behov for kommunal støtte og hjælp, hvorfor der registreres et 0 ”intet behov for støtte” under støttebehovsvurderingen.
 De to indsatser på hhv. aktivitets- og samværstilbuddet og det botilbudslignende tilbud afsluttes, og der registreres en faktisk afslutningsdato på de indeholdende ydelser.
 
-##### Spørgsmål
-
-- Hvor er datoen for den planlagte sagsopfølgning dokumenteret? (Har valgt den 30/8)
-- Skal målgrupperne fjernes?
-- Hvorfor dokumenteres der funktionsevneniveau på "Personer i Netværk"?
-
-#### FSB Documentation
+#### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
 ##### CarePlanEvaluation

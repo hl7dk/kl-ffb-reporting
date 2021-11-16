@@ -609,7 +609,7 @@ Description: "6th encounter / Sixth documentation phase – Case delivery"
 * insert ConditionEntry(e162f02a-6f82-4aed-97cd-a47a43c58413)  // Spise
 * insert ConditionEntry(a2c6378d-66da-4aa8-b973-729687224ab0)  // Købe ind
 * insert ConditionEntry(4908c9b2-fadc-4228-adbe-69ed9ef70ff3)  // Færdes med transportmidler
-* insert ClinicalImpressionEntryVersion(26d1a3de-0bd0-43d6-b52c-9c5687f01e45, v3)
+* insert ClinicalImpressionEntry(96a38e6e-3fe4-4773-a7c7-ded60607d259)
 * insert ConditionEntry(76cecdcc-321c-479f-ae95-a8f020541650) // Anden udviklingsforstyrrelse
 * insert ConditionEntry(18045390-e599-4b7a-95f2-287f41146975) // Anden fysisk funktionsnedsættelse
 * insert ConditionEntry(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
@@ -636,6 +636,32 @@ Usage: #inline
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * recordedDate = 2021-05-28T09:17:33Z
 * extension[conditionLastAssertedDate].valueDateTime = 2021-06-18
+
+// --- InformationGathering -------------------------------------------------------------------------------------------
+
+Instance: 96a38e6e-3fe4-4773-a7c7-ded60607d259
+InstanceOf: KLReportingFFBInformationGathering
+Description: "Børge Mogensen case - third encounter"
+Usage: #inline
+* extension[basedOnServiceRequest].valueReference = Reference(9947191b-270a-4f64-9b05-8be29e7f5c58)
+* status = #in-progress
+* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* effectiveDateTime = 2021-06-18T16:53:11Z
+* finding[+].itemReference = Reference(57dc36db-56ce-4a4a-95e8-2d2c8a85871a)  // Bevidsthedstilstand
+* finding[+].itemReference = Reference(00b972ba-0b06-4000-83f9-b733700c96e0)  // Intellektuelle funktioner
+* finding[+].itemReference = Reference(45b460b2-843e-48ec-8366-a3d184bf591f)  // Problemløsning
+* finding[+].itemReference = Reference(5089bbd1-6ec1-4f4d-a83e-4a89f44c482e)  // Syn
+* finding[+].itemReference = Reference(5b74d267-952d-487f-969a-68ea6a9aae39)  // Døgnrytme
+* finding[+].itemReference = Reference(6f77529a-d449-4e86-aaed-28b524090a32)  // Tobak
+* finding[+].itemReference = Reference(6468d4a7-012e-4639-8dcf-dcec775385a0)  // Interesser
+* finding[+].itemReference = Reference(b68548a8-b792-4aba-8358-b83a4e691b7c)  // Familiesituation
+* finding[+].itemReference = Reference(ec5efa29-6355-40c7-ada4-b534901242ab)  // Boligområde
+* finding[+].itemReference = Reference(47d82311-ba67-49c4-aacc-ab3b171b4524)  // Personer i netværk
+* finding[+].itemReference = Reference(3a0e2994-9f3f-44ab-a684-06bb85c7bf9d)  // Indgå i samspil og kontakt
+* finding[+].itemReference = Reference(101f2519-adf9-43ba-b4f5-90f3917129c1)  // Varetage beskæftigelse
+* finding[+].itemReference = Reference(e162f02a-6f82-4aed-97cd-a47a43c58413)  // Spise
+* finding[+].itemReference = Reference(a2c6378d-66da-4aa8-b973-729687224ab0)  // Købe ind
+* finding[+].itemReference = Reference(4908c9b2-fadc-4228-adbe-69ed9ef70ff3)  // Færdes med transportmidler
 
 // --- InterventionGoal -----------------------------------------------------------------------------------------------
 

@@ -22,6 +22,7 @@ Description: "FFB care plan"
 * careTeam MS
 * addresses 0.. MS
 * addresses.extension contains ConditionRank named conditionRank 1..1 MS
+* addresses.extension[conditionRank].value[x] ^maxValuePositiveInt = 2
 * addresses only Reference(KLReportingFFBTargetGroup)
 * addresses ^type.aggregation = #bundled
 * supportingInfo ..0
@@ -47,7 +48,7 @@ Description: "FFB care plan"
 * author ^short = "[DK] indsatsforløbansvarlig" 
 * careTeam ^short = "[DK] indsatsforløbsleverandør og indsatsforløbtilbud" 
 * addresses ^short = "[DK] indsatsforløbmålgruppe"
-* addresses.extension[conditionRank] ^short = "[DK] indsatsforløbsmålgruppeRang" 
+* addresses.extension[conditionRank] ^short = "[DK] indsatsforløbsmålgruppeRang - 1 = primær, 2 = sekundær" 
 * intent ^short = "[DK] indsatsforløbhensigt" 
 * status ^short = "[DK] indsatsforløbstatus" 
 * goal ^short = "[DK] indsatsforløbsmål" 

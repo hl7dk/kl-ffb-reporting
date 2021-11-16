@@ -31,6 +31,7 @@ Description: "Goal related to an intervention for a citizen"
 * addresses only Reference(KLReportingFFBCondition)
 * addresses.extension contains ConditionRank named conditionRank 0..1
 * addresses.extension[ConditionRank] MS
+* addresses.extension[conditionRank].value[x] ^maxValuePositiveInt = 2
 
 * category ^short = "[DK] målkategori"
 * target[severitySlice] ^short = "[DK] målSværhedsgrad"
@@ -39,7 +40,7 @@ Description: "Goal related to an intervention for a citizen"
 * subject ^short = "[DK] målSubjekt"
 * expressedBy ^short = "[DK] målAnsvarlig"
 * addresses ^short = "[DK] målrelateret"
-* addresses.extension[conditionRank] ^short = "[DK] målrelateretRang"
+* addresses.extension[conditionRank] ^short = "[DK] målrelateretRang - 1 = primær, 2 = sekundær"
 * note.text ^short = "[DK] målnotat"
 * outcomeCode.text ^short = "[DK] målvurdering"
 * target.measure ^short = "[DK] målemetode"
