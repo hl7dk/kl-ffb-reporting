@@ -17,7 +17,7 @@ rectangle "InterventionGoal" as goal
 rectangle "TargetGroup" as targetgroup
 
 rectangle "Intervention" as intervention
-rectangle "ServiceProvider" as provider
+rectangle "ServicePerformer" as provider
 
 rectangle "FollowUp" as followup
 

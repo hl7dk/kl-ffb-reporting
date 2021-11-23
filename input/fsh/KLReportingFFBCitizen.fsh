@@ -3,10 +3,10 @@ Parent: Patient
 Id: kl-reporting-ffb-citizen
 Title: "Citizen"
 Description: "Administrative information about a citizen receiving social services."
-// * identifier 1..1
-// * identifier only dk-core-cpr-identifier
+* identifier 1..1 MS
+* identifier only dk-core-cpr-identifier
 * active ..0
-// * name ..0
+* name ..0
 * telecom ..0
 * gender ..0
 * birthDate ..0
@@ -18,10 +18,10 @@ Description: "Administrative information about a citizen receiving social servic
 * contact ..0
 * communication ..0
 * generalPractitioner ..0
-* managingOrganization 1..1
+* managingOrganization 1..1 MS
 * managingOrganization.reference ..0
 * managingOrganization.type ..0
-// * managingOrganization.identifier 1..1
-// * managingOrganization.identifier only dk-core-sor-identifier    TODO: Identifier to use?
+* managingOrganization.identifier 1..1 MS
+* managingOrganization.identifier only KombitStsOrgIdentifier
 * managingOrganization.display ..0
 * link ..0

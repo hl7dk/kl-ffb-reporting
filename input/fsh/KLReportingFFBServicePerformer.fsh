@@ -6,6 +6,7 @@ Description: "Type of service performer for a care plan"
 * identifier ..0
 * status ..0
 * category 1..1 MS
+* category from http://kl.dk/fhir/common/caresocial/ValueSet/KLServiceCodesFFB
 * name ..0
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)

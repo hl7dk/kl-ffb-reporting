@@ -20,12 +20,12 @@ Description: "Børge Mogensen"
 Usage: #inline
 * identifier
   * use = #official
-  * value = "010119814321"
+  * value = "0101814321"
   * system = "urn:oid:1.2.208.176.1.2"
 * managingOrganization.identifier
   * use = #official
-  * value =  "123456789012345"
-  * system = "urn:oid:1.2.208.176.1.1"
+  * value =  "d4e3f4fb-6761-4d6c-9086-74c49231f11e"
+  * system = "https://www.kombit.dk/organisation"
 
 // --- ServiceRequest ------------------------------------------------------------------------------------------------
 
@@ -400,6 +400,7 @@ Usage: #inline
 * status = $requestStatus#active
 * intent = $requestIntent#plan
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* period.start = 2021-05-29
 * activity.outcomeReference = Reference(213d0504-1a41-4330-b9a0-347d3ba4bb2a)
 
 // ===================================================================================================================
@@ -427,6 +428,7 @@ Description: "Anden udviklingsforstyrrelse"
 Usage: #inline
 * code = $KLFFB#5cfc9530-a193-4f66-9981-3b980ee9ea7b
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* recordedDate = 2021-05-29
 
 Instance: 18045390-e599-4b7a-95f2-287f41146975
 InstanceOf: KLReportingFFBTargetGroup
@@ -434,6 +436,7 @@ Description: "Anden fysisk funktionsnedsættelse"
 Usage: #inline
 * code = $KLFFB#5cfc9530-a193-4f66-9981-3b980ee9ea7b
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* recordedDate = 2021-05-29
 
 Instance: 787bb5e8-cb82-4e21-9459-285e5e14b814
 InstanceOf: KLReportingFFBTargetGroup
@@ -441,6 +444,7 @@ Description: "Selvmordstanker eller -forsøg"
 Usage: #inline
 * code = $KLFFB#5e95db73-4d16-4084-93a3-595c0650b160
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* recordedDate = 2021-05-29
 
 // --- CarePlan ------------------------------------------------------------------------------------------------------
 
@@ -455,6 +459,7 @@ Usage: #inline
 * status = $requestStatus#active
 * intent = $requestIntent#plan
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* period.start = 2021-05-29
 * addresses[+] = Reference(76cecdcc-321c-479f-ae95-a8f020541650) // Anden udviklingsforstyrrelse
 * addresses[=].extension[ConditionRank].valuePositiveInt = 1
 * addresses[+] = Reference(18045390-e599-4b7a-95f2-287f41146975) // Anden fysisk funktionsnedsættelse
@@ -515,6 +520,7 @@ Usage: #inline
 * status = $requestStatus#active
 * intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* period.start = 2021-05-29
 * careTeam[+] = Reference(31a46e2d-0d54-4600-8ecb-1b239749cfd1) // Almindeligt længerevarende botilbud til voksne
 * careTeam[+] = Reference(9f4982de-34fd-440b-9980-fa72b51673eb) // Aktivitets- og samværstilbud
 * addresses[+] = Reference(76cecdcc-321c-479f-ae95-a8f020541650) // Anden udviklingsforstyrrelse
@@ -543,7 +549,6 @@ Instance: 6ef8bead-fb42-4dbe-919f-e4a1f94135e2
 InstanceOf: KLReportingFFBIntervention
 Description: "Støtte til daglige opgaver i hjemmet"
 Usage: #inline
-* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -557,7 +562,6 @@ Instance: b4ec722a-3cb4-4e9d-8a3b-58ebdb329361
 InstanceOf: KLReportingFFBIntervention
 Description: "Støtte til sund levevis"
 Usage: #inline
-* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -571,7 +575,6 @@ Instance: e9374e0c-fea8-48d5-a545-6f893d527e98
 InstanceOf: KLReportingFFBIntervention
 Description: "Social aktivitet"
 Usage: #inline
-* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -690,7 +693,6 @@ Instance: e9374e0c-fea8-48d5-a545-6f893d527e98-v2 // Fake id
 InstanceOf: KLReportingFFBIntervention
 Description: "Social aktivitet"
 Usage: #inline
-* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * id = "e9374e0c-fea8-48d5-a545-6f893d527e98" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
@@ -706,7 +708,6 @@ Instance: 629c659a-8be2-44e9-a852-3efa2d95f856
 InstanceOf: KLReportingFFBIntervention
 Description: "Kompetenceudviklende aktivitet"
 Usage: #inline
-* extension[followUpDate].valueReference = Reference(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
 * intent = $requestIntent#plan
@@ -818,4 +819,6 @@ Usage: #inline
 * status = $requestStatus#completed
 * intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
+* period.start = 2021-05-29
+* period.end = 2021-08-30
 * activity.outcomeReference = Reference(e548c437-05e2-43d9-836f-5d3b4f8e331f)

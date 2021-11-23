@@ -25,7 +25,7 @@ The following FSB documentation is documented in the record system.
 {:class="grid"}
 | Identifier |
 | ---------- |
-| 01011981-4321 |
+| 010181-4321 |
 
 ##### ServiceRequest
 

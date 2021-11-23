@@ -20,7 +20,7 @@ Description: "Assessment of the citizen"
 * subject only Reference(KLReportingFFBCitizen)
 * subject ^type.aggregation = #bundled
 * encounter ..0
-* effective[x] MS
+* effective[x] 1.. MS
 * effective[x] only dateTime
 * date ..0
 * assessor ..0
