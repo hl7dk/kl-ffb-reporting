@@ -126,18 +126,17 @@ The following new FSB documentation is documented in the record system.
 | Addresses (primary) | Addresses (secondary) | Severity | ChangeValue |
 | ------------------- | --------------------- | -------- | ----------- |
 | Indgå i samspil og kontakt | Varetage beskæftigelse; Færdes med transportmidler | 1 - Let nedsat funktionsevne | Fastholde funktionsevne |
-| Købe ind | Gang og bevægelse; Forstå meddelelser | 0 - Ingen nedsat funktionsevne | Udvikle funktionsevne |
+| Købe ind | - | 0 - Ingen nedsat funktionsevne | Udvikle funktionsevne |
 | Spise | - | 3 - Svært nedsat funktionsevne | Begrænse tab af funktionsevne |
 
 #### Reporting
 A delivery report is generated containing:
 
 - Citizen (unchanged)
-- Information gathering (unchanged)
+- Information gathering (updated)
     - Reference to service request (unchanged)
     - Reference to conditions (unchanged)
-- Care plan (new)
-    - Reference to care plan evaluation
+    - Reference to care plan evaluation (new)
 - Care plan evaluation (new)
 - Intervention goals (new)
     - Reference to conditions
@@ -171,16 +170,7 @@ The following new FSB documentation is documented in the record system.
 | Selvmordstanker eller -forsøg | 29-5-2021 |
 
 #### Reporting
-A delivery report is generated containing:
-
-- Citizen (unchanged)
-- Care plan (updated)
-    - Reference to care plan evaluation (unchanged)
-    - Reference to target groups (new)
-- Care plan evaluation (unchanged)
-- Target groups (new)
-
-The report for this is found here: [DeliveryReport-4th-Encounter](Bundle-4e1f8c3c-4d24-4a00-be8f-814df58a2a28.html)
+A delivery report is not generated her as the target groups will be reported on the subsequent care plans.
 
 ### 5th encounter / Fifth documentation phase – Case appropriation
 
@@ -194,35 +184,35 @@ Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, 
 #### FFB Documentation
 The following new FSB documentation is documented in the record system.
 
-##### ServicePerformer
+##### CarePlan
 
 {:class="grid"}
-| Category |
-| -------- |
-| Almindeligt længerevarende botilbud til voksne |
-| Aktivitets- og samværstilbud |
+| Start date | ServicePerformer |
+| ---------- | ---------------- |
+| 29/5-2021 | Almindeligt længerevarende botilbud til voksne |
+| 29/5-2021 | Aktivitets- og samværstilbud |
 
 ##### Intervention
 
 {:class="grid"}
-| Intervention | Start date | End date | Recorded date |
-| ------------ | ---------- | -------- | ------------- |
-| Støtte til daglige opgaver i hjemmet | 29/5-2021 | - | 29/5-2021 |
-| Støtte til sund levevis | 29/5-2021 | - | 29/5-2021 |
-| Sociale aktivitet | 29/5-2021 | - | 29/5-2021 |
+| Intervention | Start date | End date | Recorded date | Care plan |
+| ------------ | ---------- | -------- | ------------- | ---------------- |
+| Støtte til daglige opgaver i hjemmet | 29/5-2021 | - | 29/5-2021 | Almindeligt længerevarende botilbud til voksne |
+| Støtte til sund levevis | 29/5-2021 | - | 29/5-2021 | Almindeligt længerevarende botilbud til voksne |
+| Sociale aktivitet | 29/5-2021 | - | 29/5-2021 | Aktivitets- og samværstilbud |
 
 #### Reporting
 A delivery report is generated containing:
 
 - Citizen (unchanged)
-- Care plan (updated)
-    - Reference to care plan evaluation (unchanged)
-    - Reference to target groups (unchanged)
-    - Reference to service performers (new)
-    - Reference to follow-up encounter (new)
+- Care plans (new)
+    - Reference to care plan evaluation
+    - Reference to target groups
+    - Reference to service performers
+    - Reference to follow-up encounter
 - Interventions (new)
     - Reference to care plan
-- Target groups (unchanged)
+- Target groups (new)
 - Service performers (new)
 - Follow-up encounter (new)
 
@@ -240,6 +230,14 @@ Den socialpædagogiske medarbejder udformer journalnotater på Børges Funktione
 
 #### FFB Documentation
 The following new FSB documentation is documented in the record system.
+
+##### Follow-up
+
+{:class="grid"}
+| Care plan | Value | Effective |
+| --------- | ----- | --------- |
+| Almindeligt længerevarende botilbud til voksne | Træf afgørelse om fortsættelse af indsats | 18/6-2021 |
+| Aktivitets- og samværstilbud | Træf afgørelse om afslutning af indsats og visiter til ny | 18/6-2021 |
 
 ##### Condition
 
@@ -270,20 +268,22 @@ A delivery report is generated containing:
 - Information gathering (unchanged)
     - Reference to service request (unchanged)
     - Reference to the conditions (unchanged)
-- Care plan (unchanged)
-    - Reference to care plan evaluation (unchanged)
-    - Reference to target groups (unchanged)
-    - Reference to service performers (unchanged)
-    - Reference to follow-up encounter (unchanged)
+    - Reference to care plan evaluation (new)
+- Care plans (one unchanged, one updated, and one new)
+    - Reference to care plan evaluation
+    - Reference to target groups
+    - Reference to service performers
+    - Reference to follow-up encounter
 - Interventions (one new and one updated)
-    - Reference to the care plan
-    - Reference to the intervention goal
+    - Reference to care plan
 - Intervention goals (one new)
     - Reference to conditions
 - Service request (unchanged)
 - Conditions (one is updated)
 - Service performers (unchanged)
 - Follow-up encounter (unchanged)
+- Follow-ups (new)
+    - Reference to care plan
 
 The report for this is found here: [DeliveryReport-6th-Encounter](Bundle-aaa5d153-968e-46ec-9f9e-cfc6e93a3f1b.html)
 

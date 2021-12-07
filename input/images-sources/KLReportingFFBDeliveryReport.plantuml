@@ -7,12 +7,15 @@ rectangle "Citizen" as citizen
 rectangle "ServiceRequest" as request
 
 rectangle "InformationGathering" as information
-rectangle "Condition" as condition
 
 rectangle "CarePlan" as careplan
 
-rectangle "CarePlanEvaluation" as careplanevaluation
 rectangle "InterventionGoal" as goal
+rectangle "FollowUpEncounter" as encounter
+
+rectangle "Condition" as condition
+
+rectangle "CarePlanEvaluation" as careplanevaluation
 
 rectangle "TargetGroup" as targetgroup
 
@@ -21,13 +24,12 @@ rectangle "ServicePerformer" as provider
 
 rectangle "FollowUp" as followup
 
-rectangle "FollowUpEncounter" as encounter
-
 report -- citizen
 report --"*" request
 report --"*" careplan
 
 information -->"finding *" condition
+information -->"investigation" careplanevaluation
 
 request "basedon"<-- information
 careplan -->"goal *\n" goal
@@ -36,7 +38,7 @@ careplan -->"addresses *" targetgroup
 careplan "basedon"<-- intervention
 careplan -->"careteam *" provider
 careplan "focus"<-- followup
-condition "addresses"<- goal
+condition "addresses"<-- goal
 
 careplan -->"followUpDate" encounter
 goal ->"followUpDate" encounter

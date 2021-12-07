@@ -36,7 +36,9 @@ Description: "Assessment of the citizen"
 * finding.itemReference only Reference(KLReportingFFBCondition)
 * finding.itemReference ^type.aggregation = #bundled
 * finding.basis ..0
-* investigation ..0
+* investigation ..1 MS
+* investigation.item MS
+* investigation.item only Reference(KLReportingFFBCarePlanEvaluation)
 
 
 * code.coding ^short = "[DK] oplysningsaktivitetstype"

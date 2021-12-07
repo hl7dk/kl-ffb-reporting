@@ -10,7 +10,7 @@ Description: "Støttebehovsvurdering"
 * status MS
 * code ..1 MS
 * code.coding 1..1 MS
-* code.coding = $KLCommon#effe55c7-572c-4a99-8fb4-2a9dda2f6572 "FFB støttebehovsvurdering"
+* code.coding = $KLCommon#effe55c7-572c-4a99-8fb4-2a9dda2f6572
 * code.text ..0
 * subject 1.. MS
 * subject only Reference(KLReportingFFBCitizen)

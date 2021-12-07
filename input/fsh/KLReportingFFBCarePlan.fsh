@@ -50,6 +50,9 @@ Description: "FFB care plan"
 * note ..0
 * obeys kl-reporting-ffb-care-plan-1
 * obeys kl-reporting-ffb-care-plan-2
+// * obeys kl-reporting-ffb-care-plan-3
+* obeys kl-reporting-ffb-care-plan-4
+* obeys kl-reporting-ffb-care-plan-5
 
 * category.coding ^short = "[DK] indsatsforløbKategori"
 * description ^short = "[DK] indsatsforløbBeskrivelse" 
@@ -76,3 +79,18 @@ Invariant: kl-reporting-ffb-care-plan-2
 Description: "CarePlan shall address no more than one condition with rank 1"
 Severity: #error
 Expression: "addresses.where(extension('http://kl.dk/fhir/common/caresocial/StructureDefinition/ConditionRank').valuePositiveInt = '1').count() < 2"
+
+Invariant: kl-reporting-ffb-care-plan-3
+Description: "CarePlan shall contain intervention goals if ordered and not completed"
+Severity: #error
+Expression: "(intent != 'order') or (status = 'completed') or goal.exists()"
+
+Invariant: kl-reporting-ffb-care-plan-4
+Description: "CarePlan shall contain evaluation if ordered and not completed"
+Severity: #error
+Expression: "(intent != 'order') or (status = 'completed') or activity.outcomeReference.exists()"
+
+Invariant: kl-reporting-ffb-care-plan-5
+Description: "CarePlan shall contain target groups if ordered and not completed"
+Severity: #error
+Expression: "(intent != 'order') or (status = 'completed') or addresses.exists()"
