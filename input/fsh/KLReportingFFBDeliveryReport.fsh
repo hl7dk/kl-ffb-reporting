@@ -19,7 +19,7 @@ Description: "Deliver report to deliver for each citizen."
     CarePlan or // (KLReportingFFBCarePlan or KLReportingFFBIntervention)
     Condition or // (KLReportingFFBCondition or KLReportingFFBTargetGroup)
     Observation // (KLReportingFFBCarePlanEvaluation or KLReportingFFBFollowUp)
-* entry.resource ^short = "Content constrained to known profiles (see also constraint kl-reporting-ffb-delivery-report-1 and kl-reporting-ffb-delivery-report-2)"
+* entry.resource ^short = "Content constrained to known profiles (see also constraint kl-reporting-ffb-delivery-report-1, kl-reporting-ffb-delivery-report-2, and kl-reporting-ffb-delivery-report-3)"
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0

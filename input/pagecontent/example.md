@@ -35,14 +35,7 @@ The following FSB documentation is documented in the record system.
 | Sag154689 |
 
 #### Reporting
-A delivery report is generated containing:
-
-- Citizen (new)
-- Information gathering (new)
-    - Reference to service request
-- Service request (new)
-
-The report for this is found here: [DeliveryReport-1st-Encounter](Bundle-1ef32e7e-ec7c-40e7-9fb9-82b78ff9d91b.html)
+A delivery report is not generated here as the target groups will be reported on the subsequent care plans.
 
 ### 2nd encounter / Second documentation phase – Case insight
 
@@ -78,11 +71,11 @@ The following new FSB documentation is documented in the record system.
 #### Reporting
 A delivery report is generated containing:
 
-- Citizen (unchanged)
-- Information gathering (updated)
-    - Reference to service request (unchanged)
-    - Reference to conditions (new)
-- Service request (unchanged)
+- Citizen (new)
+- Information gathering (new)
+    - Reference to service request
+    - Reference to conditions
+- Service request (new)
 - Conditions (new)
 
 The report for this is found here: [DeliveryReport-2nd-Encounter](Bundle-498644ca-b26c-4ba7-a1ef-69d691297ba3.html)
@@ -170,7 +163,7 @@ The following new FSB documentation is documented in the record system.
 | Selvmordstanker eller -forsøg | 29-5-2021 |
 
 #### Reporting
-A delivery report is not generated her as the target groups will be reported on the subsequent care plans.
+A delivery report is not generated here as the target groups will be reported on the subsequent care plans.
 
 ### 5th encounter / Fifth documentation phase – Case appropriation
 

@@ -2,16 +2,6 @@
 // 1st Encounter
 // ===================================================================================================================
 
-Instance: 1ef32e7e-ec7c-40e7-9fb9-82b78ff9d91b
-InstanceOf: KLReportingFFBDeliveryReport
-Title: "1st encounter"
-Description: "1st encounter / First documentation phase / phase – Case opening"
-* type = #collection
-* timestamp = 2021-05-26T13:04:04Z
-* insert CitizenEntry(da16c0a1-840a-46b0-98b3-761e4501b343)
-* insert ServiceRequestEntry(9947191b-270a-4f64-9b05-8be29e7f5c58)
-* insert ClinicalImpressionEntry(26d1a3de-0bd0-43d6-b52c-9c5687f01e45)
-
 // --- Citizen -------------------------------------------------------------------------------------------------------
 
 Instance: da16c0a1-840a-46b0-98b3-761e4501b343
@@ -40,17 +30,6 @@ Usage: #inline
 * intent = $requestIntent#proposal
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 
-// --- InformationGathering ------------------------------------------------------------------------------------------
-
-Instance: 26d1a3de-0bd0-43d6-b52c-9c5687f01e45
-InstanceOf: KLReportingFFBInformationGathering
-Description: "Børge Mogensen case - first encounter"
-Usage: #inline
-* extension[basedOnServiceRequest].valueReference = Reference(9947191b-270a-4f64-9b05-8be29e7f5c58)
-* status = #in-progress
-* subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
-* effectiveDateTime = 2021-05-26T13:04:04Z
-
 // ===================================================================================================================
 // 2nd Encounter
 // ===================================================================================================================
@@ -78,7 +57,7 @@ Description: "2nd encounter / Second documentation phase – Case insight"
 * insert ConditionEntry(e162f02a-6f82-4aed-97cd-a47a43c58413)  // Spise
 * insert ConditionEntry(a2c6378d-66da-4aa8-b973-729687224ab0)  // Købe ind
 * insert ConditionEntry(4908c9b2-fadc-4228-adbe-69ed9ef70ff3)  // Færdes med transportmidler
-* insert ClinicalImpressionEntryVersion(26d1a3de-0bd0-43d6-b52c-9c5687f01e45, v2)
+* insert ClinicalImpressionEntry(26d1a3de-0bd0-43d6-b52c-9c5687f01e45) // Information gathering
 
 // --- Conditions ----------------------------------------------------------------------------------------------------
 
@@ -237,13 +216,12 @@ Usage: #inline
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * recordedDate = 2021-05-28T09:17:33Z
 
-// --- InformationGathering v2 ---------------------------------------------------------------------------------------
+// --- InformationGathering ------------------------------------------------------------------------------------------
 
-Instance: 26d1a3de-0bd0-43d6-b52c-9c5687f01e45-v2 // Fake id
+Instance: 26d1a3de-0bd0-43d6-b52c-9c5687f01e45
 InstanceOf: KLReportingFFBInformationGathering
 Description: "Børge Mogensen case - second encounter"
 Usage: #inline
-* id = "26d1a3de-0bd0-43d6-b52c-9c5687f01e45" // Real id
 * extension[basedOnServiceRequest].valueReference = Reference(9947191b-270a-4f64-9b05-8be29e7f5c58)
 * status = #in-progress
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
@@ -296,7 +274,6 @@ Description: "3rd encounter / Third documentation phase – Case assesment"
 * insert GoalEntry(90fa089a-1f80-40d0-96db-8e875e241b06) // Begrænse tab - Spise
 * insert ClinicalImpressionEntryVersion(26d1a3de-0bd0-43d6-b52c-9c5687f01e45, v3)
 * insert ObservationEntry(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
-// * insert CarePlanEntry(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 
 // --- InterventionGoals ---------------------------------------------------------------------------------------------
 
@@ -357,7 +334,7 @@ Description: "Børge Mogensen case - third encounter"
 Usage: #inline
 * id = "26d1a3de-0bd0-43d6-b52c-9c5687f01e45" // Real id
 * extension[basedOnServiceRequest].valueReference = Reference(9947191b-270a-4f64-9b05-8be29e7f5c58)
-* status = #in-progress
+* status = #completed
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * effectiveDateTime = 2021-05-29T11:54:13Z
 * finding[+].itemReference = Reference(57dc36db-56ce-4a4a-95e8-2d2c8a85871a)  // Bevidsthedstilstand
@@ -393,19 +370,6 @@ Usage: #inline
 // ===================================================================================================================
 // 4th Encounter
 // ===================================================================================================================
-
-// Instance: 4e1f8c3c-4d24-4a00-be8f-814df58a2a28
-// InstanceOf: KLReportingFFBDeliveryReport
-// Title: "4th encounter"
-// Description: "4th encounter / Fourth documentation phase – Case verdict"
-// * type = #collection
-// * timestamp = 2021-05-29T14:17:12Z
-// * insert CitizenEntry(da16c0a1-840a-46b0-98b3-761e4501b343)
-// * insert ConditionEntry(76cecdcc-321c-479f-ae95-a8f020541650) // Anden udviklingsforstyrrelse
-// * insert ConditionEntry(18045390-e599-4b7a-95f2-287f41146975) // Anden fysisk funktionsnedsættelse
-// * insert ConditionEntry(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
-// * insert ObservationEntry(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
-// * insert CarePlanEntry(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 
 // --- TargetGroups --------------------------------------------------------------------------------------------------
 
@@ -454,8 +418,8 @@ Description: "5th encounter / Fifth documentation phase – Case appropriation"
 * insert CareTeamEntry(31a46e2d-0d54-4600-8ecb-1b239749cfd1) // Almindeligt længerevarende botilbud til voksne
 * insert CareTeamEntry(9f4982de-34fd-440b-9980-fa72b51673eb) // Aktivitets- og samværstilbud
 * insert EncounterEntry(ef6a3536-ecaa-49c5-ace1-53e19acb4cd1) // FollowUp on 29/8-2021
-* insert CarePlanEntry(944c7c24-37b4-455e-9319-cd9f35a7aec9)
-* insert CarePlanEntry(8ea1d7f3-3c40-4826-bf35-d16b313610d4)
+* insert CarePlanEntry(944c7c24-37b4-455e-9319-cd9f35a7aec9) // Botilbud
+* insert CarePlanEntry(8ea1d7f3-3c40-4826-bf35-d16b313610d4) // Dagtilbud
 
 // --- CareTeams -----------------------------------------------------------------------------------------------------
 Instance: 31a46e2d-0d54-4600-8ecb-1b239749cfd1
@@ -472,7 +436,7 @@ Usage: #inline
 * category = $KLFFB#9401777d-bdc5-4f52-9804-63c8cae9a792 // Aktivitets- og samværstilbud
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 
-// --- CarePlan Botilbud ---------------------------------------------------------------------------------------------
+// --- CarePlans -----------------------------------------------------------------------------------------------------
 
 Instance: 944c7c24-37b4-455e-9319-cd9f35a7aec9
 InstanceOf: KLReportingFFBCarePlan
@@ -494,8 +458,6 @@ Usage: #inline
 * addresses[+] = Reference(787bb5e8-cb82-4e21-9459-285e5e14b814) // Selvmordstanker eller -forsøg
 * addresses[=].extension[ConditionRank].valuePositiveInt = 2
 * activity.outcomeReference = Reference(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
-
-// --- CarePlan Dagtilbud --------------------------------------------------------------------------------------------
 
 Instance: 8ea1d7f3-3c40-4826-bf35-d16b313610d4
 InstanceOf: KLReportingFFBCarePlan
@@ -538,10 +500,10 @@ Description: "Støtte til daglige opgaver i hjemmet"
 Usage: #inline
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * activity.detail.code = $KLFFB#638f44df-6bf2-47f8-9935-b8fdc83e5bf5
 * activity.detail.status = $carePlanActivityStatus#in-progress
 
@@ -551,10 +513,10 @@ Description: "Støtte til sund levevis"
 Usage: #inline
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * activity.detail.code = $KLFFB#3c1639d0-e486-43c6-8add-448b8aff4b8f
 * activity.detail.status = $carePlanActivityStatus#in-progress
 
@@ -564,10 +526,10 @@ Description: "Social aktivitet"
 Usage: #inline
 * basedOn = Reference(8ea1d7f3-3c40-4826-bf35-d16b313610d4)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * activity.detail.code = $KLFFB#7e419926-bb04-4829-99c9-95ea20403c2c
 * activity.detail.status = $carePlanActivityStatus#in-progress
 
@@ -686,10 +648,10 @@ Usage: #inline
 * id = "e9374e0c-fea8-48d5-a545-6f893d527e98" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * period.end = 2021-06-18
 * activity.detail.code = $KLFFB#7e419926-bb04-4829-99c9-95ea20403c2c
 * activity.detail.status = $carePlanActivityStatus#in-progress
@@ -700,7 +662,7 @@ Description: "Kompetenceudviklende aktivitet"
 Usage: #inline
 * basedOn = Reference(d54a2bb0-4fdc-4ea8-adaf-1241836a94f5)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-06-18T15:04:47Z
 * period.start = 2021-06-18
@@ -730,7 +692,7 @@ Usage: #inline
 * effectiveDateTime = 2021-06-18
 * valueCodeableConcept = $KLFFB#b4c01aa8-82fd-44e4-83ff-ca19ec02c779	"Træf afgørelse om afslutning af indsats og visiter til ny"
 
-// --- CarePlan - Dagtilbud ------------------------------------------------------------------------------------------
+// --- CarePlan ------------------------------------------------------------------------------------------------------
 Instance: 8ea1d7f3-3c40-4826-bf35-d16b313610d4-v2 // Fake id
 InstanceOf: KLReportingFFBCarePlan
 Description: "Børge Mogensen - Care Plan - Dagtilbud"
@@ -805,7 +767,7 @@ InstanceOf: KLReportingFFBInformationGathering
 Description: "Børge Mogensen case - new assessment"
 Usage: #inline
 * extension[basedOnServiceRequest].valueReference = Reference(9947191b-270a-4f64-9b05-8be29e7f5c58)
-* status = #in-progress
+* status = #completed
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * effectiveDateTime = 2021-05-26T13:04:04Z
 * investigation[+].item = Reference(e548c437-05e2-43d9-836f-5d3b4f8e331f) // Intet støttebehov
@@ -820,10 +782,10 @@ Usage: #inline
 * id = "6ef8bead-fb42-4dbe-919f-e4a1f94135e2" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * period.end = 2021-08-30
 * activity.detail.code = $KLFFB#638f44df-6bf2-47f8-9935-b8fdc83e5bf5
 * activity.detail.status = $carePlanActivityStatus#in-progress
@@ -835,10 +797,10 @@ Usage: #inline
 * id = "b4ec722a-3cb4-4e9d-8a3b-58ebdb329361" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-05-29T16:10:23Z
-* period.start = 2021-05-29T16:10:23Z
+* period.start = 2021-05-29
 * period.end = 2021-08-30
 * activity.detail.code = $KLFFB#3c1639d0-e486-43c6-8add-448b8aff4b8f
 * activity.detail.status = $carePlanActivityStatus#in-progress
@@ -850,7 +812,7 @@ Usage: #inline
 * id = "629c659a-8be2-44e9-a852-3efa2d95f856" // Real id
 * basedOn = Reference(944c7c24-37b4-455e-9319-cd9f35a7aec9)
 * status = $requestStatus#active
-* intent = $requestIntent#plan
+* intent = $requestIntent#order
 * subject = Reference(da16c0a1-840a-46b0-98b3-761e4501b343)
 * created = 2021-06-18T15:04:47Z
 * period.start = 2021-06-18

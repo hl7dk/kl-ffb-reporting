@@ -25,13 +25,14 @@ rectangle "ServicePerformer" as provider
 rectangle "FollowUp" as followup
 
 report -- citizen
-report --"*" request
+report --"*" information
 report --"*" careplan
 
 information -->"finding *" condition
 information -->"investigation" careplanevaluation
 
-request "basedon"<-- information
+' request "basedon"<- information
+information -->"basedOn" request
 careplan -->"goal *\n" goal
 careplan -->"outcome" careplanevaluation
 careplan -->"addresses *" targetgroup
