@@ -42,7 +42,7 @@ Description: "FFB care plan"
 * activity 0..1 MS
 * activity.outcomeCodeableConcept ..0
 * activity.outcomeReference 1..1 MS
-* activity.outcomeReference only Reference(KLReportingFFBCarePlanEvaluation)
+* activity.outcomeReference only Reference(KLReportingFFBCareEvaluation)
 * activity.outcomeReference ^type.aggregation = #bundled
 * activity.progress ..0
 * activity.reference ..0

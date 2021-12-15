@@ -15,7 +15,7 @@ rectangle "FollowUpEncounter" as encounter
 
 rectangle "Condition" as condition
 
-rectangle "CarePlanEvaluation" as careplanevaluation
+rectangle "CareEvaluation" as careplanevaluation
 
 rectangle "TargetGroup" as targetgroup
 

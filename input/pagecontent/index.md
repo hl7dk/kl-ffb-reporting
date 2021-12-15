@@ -108,9 +108,9 @@ All changes to the care plan evalueation since the last reporting must be contai
 Free text information about care plan evaluations is not part of this reporting.
 
 ##### Validation
-- CarePlanEvaluation refer to the citizen
-- CarePlanEvaluation contains the date of the evaluation
-- CarePlanEvaluation contains a valid code according to FFB (støttebehov)
+- CareEvaluation refer to the citizen
+- CareEvaluation contains the date of the evaluation
+- CareEvaluation contains a valid code according to FFB (støttebehov)
 
 #### Target Group
 Information about the target group (målgruppe) for the citizen. A target group must contain a valid target group code and the date of its original documentation.

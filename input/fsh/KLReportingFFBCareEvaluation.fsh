@@ -1,7 +1,7 @@
-Profile: KLReportingFFBCarePlanEvaluation
+Profile: KLReportingFFBCareEvaluation
 Parent: Observation
-Id: kl-reporting-ffb-carePlanEvaluation
-Title: "CarePlanEvaluation"
+Id: kl-reporting-ffb-careEvaluation
+Title: "CareEvaluation"
 Description: "Støttebehovsvurdering"
 * identifier ..0
 * basedOn ..0

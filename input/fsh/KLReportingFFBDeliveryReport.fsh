@@ -18,7 +18,7 @@ Description: "Deliver report to deliver for each citizen."
     KLReportingFFBFollowUpEncounter or
     CarePlan or // (KLReportingFFBCarePlan or KLReportingFFBIntervention)
     Condition or // (KLReportingFFBCondition or KLReportingFFBTargetGroup)
-    Observation // (KLReportingFFBCarePlanEvaluation or KLReportingFFBFollowUp)
+    Observation // (KLReportingFFBCareEvaluation or KLReportingFFBFollowUp)
 * entry.resource ^short = "Content constrained to known profiles (see also constraint kl-reporting-ffb-delivery-report-1, kl-reporting-ffb-delivery-report-2, and kl-reporting-ffb-delivery-report-3)"
 * entry.search ..0
 * entry.request ..0
@@ -46,5 +46,5 @@ Invariant: kl-reporting-ffb-delivery-report-3
 Description: "All CarePlan resources shall conform to either kl-reporting-ffb-carePlan or kl-reporting-ffb-intervention profile"
 Severity: #error
 Expression: "entry.ofType(Observation).all(
-    resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-carePlanEvaluation')
+    resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-careEvaluation')
  or resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-followUp'))"

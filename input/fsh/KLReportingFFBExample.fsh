@@ -355,10 +355,10 @@ Usage: #inline
 * investigation[+].item = Reference(213d0504-1a41-4330-b9a0-347d3ba4bb2a) // Let støttebehov
 * investigation[=].code.coding = $KLCommon#effe55c7-572c-4a99-8fb4-2a9dda2f6572 "FFB støttebehovsvurdering"
 
-// --- CarePlanEvaluation --------------------------------------------------------------------------------------------
+// --- CareEvaluation ------------------------------------------------------------------------------------------------
 
 Instance: 213d0504-1a41-4330-b9a0-347d3ba4bb2a
-InstanceOf: KLReportingFFBCarePlanEvaluation
+InstanceOf: KLReportingFFBCareEvaluation
 Description: "Støttebehovsvurdering for Børge Mogensen"
 Usage: #inline
 * status = $observationStatus#final
@@ -820,10 +820,10 @@ Usage: #inline
 * activity.detail.code = $KLFFB#f25674bf-3162-45c3-bde4-6d542bf9629b
 * activity.detail.status = $carePlanActivityStatus#in-progress
 
-// --- CarePlanEvaluation --------------------------------------------------------------------------------------------
+// --- CareEvaluation ------------------------------------------------------------------------------------------------
 
 Instance: e548c437-05e2-43d9-836f-5d3b4f8e331f
-InstanceOf: KLReportingFFBCarePlanEvaluation
+InstanceOf: KLReportingFFBCareEvaluation
 Description: "Ny støttebehovsvurdering for Børge Mogensen - 30/8"
 Usage: #inline
 * status = $observationStatus#final

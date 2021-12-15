@@ -1,5 +1,5 @@
 This page describes seven subsequent delivery reports for the citizen Børge Mogensen.
-For each delivery report the story is told (in Danish), the FSB documentation is listed, and the reporting example is given.
+For each delivery report the story is told (in Danish), the FFB documentation is listed, and the reporting example is given.
 
 ### 1st encounter / First documentation phase / phase – Case opening
 
@@ -18,7 +18,7 @@ Børge drømmer om en tilværelse hvor han kan blive ved med at fungere i hverda
 Visiterende sagsbehandler starter sagen med at indhente diagnoseoplysninger på Børge, og kan se at der ikke foreligger nogle gældende lægefaglige diagnoser på Børge.
 
 #### FFB Documentation
-The following FSB documentation is documented in the record system.
+The following FFB documentation is documented in the record system.
 
 ##### Citizen
 
@@ -45,7 +45,7 @@ Visitator udarbejder udredningen på baggrund af samtale med Børge Mogensen og 
 Ved udredning af Børge Mogensens aktivitets- og deltagelsestemaer vurderer og registrerer visiterende myndighedssagsbehandler Børge Mogensens funktionsevneniveau på en skala mellem 0-4.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
 ##### Condition
 
@@ -97,16 +97,9 @@ Det vurderes at Børge har et let støttebehov (værdi 1), da det ikke er nødve
 Der knyttes et lokalt sagsafgørelsesID til vurderingen af støttebehov, da denne kan være forskellig pr. individuel oprettet sag.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
-##### CarePlan
-
-{:class="grid"}
-| MunicipalityCaseNumber | Startdato | Slutdato |
-| ---------------------- | --------- | -------- |
-| Sag154689 | 29/5-2021 | - |
-
-##### CarePlanEvaluation
+##### CareEvaluation
 
 {:class="grid"}
 | Evaluation | Vurderingsdato |
@@ -129,8 +122,8 @@ A delivery report is generated containing:
 - Information gathering (updated)
     - Reference to service request (unchanged)
     - Reference to conditions (unchanged)
-    - Reference to care plan evaluation (new)
-- Care plan evaluation (new)
+    - Reference to care evaluation (new)
+- Care evaluation (new)
 - Intervention goals (new)
     - Reference to conditions
 - Service request (unchanged)
@@ -151,7 +144,7 @@ Der knyttes et sagsafgørelsesID til registreringen af målgrupper, da det kun e
 Disse kan være varierende på tværs af sager.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
 ##### TargetGroup
 
@@ -175,7 +168,7 @@ Begge indsatser kobles til den oprindelige afgørelse med et sagsafgørelsesID.
 Bevillingen afsluttet ved at der sendes en bestilling til de to sociale tilbud, og et brev til Børge.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
 ##### CarePlan
 
@@ -199,7 +192,7 @@ A delivery report is generated containing:
 
 - Citizen (unchanged)
 - Care plans (new)
-    - Reference to care plan evaluation
+    - Reference to care evaluation
     - Reference to target groups
     - Reference to service performers
     - Reference to follow-up encounter
@@ -222,7 +215,7 @@ Samtidigt opdaterer den visiterende myndighedssagsbehandler aktivitets- og delta
 Den socialpædagogiske medarbejder udformer journalnotater på Børges Funktioner & Forhold, Omgivelser og Aktivitets- og deltagelsestemaer.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
 ##### Follow-up
 
@@ -261,9 +254,9 @@ A delivery report is generated containing:
 - Information gathering (unchanged)
     - Reference to service request (unchanged)
     - Reference to the conditions (unchanged)
-    - Reference to care plan evaluation (new)
+    - Reference to care evaluation (new)
 - Care plans (one unchanged, one updated, and one new)
-    - Reference to care plan evaluation
+    - Reference to care evaluation
     - Reference to target groups
     - Reference to service performers
     - Reference to follow-up encounter
@@ -290,9 +283,9 @@ Sagsbehandler vurderer ligeledes at Børge Mogensen ikke længere har behov for 
 De to indsatser på hhv. aktivitets- og samværstilbuddet og det botilbudslignende tilbud afsluttes, og der registreres en faktisk afslutningsdato på de indeholdende ydelser.
 
 #### FFB Documentation
-The following new FSB documentation is documented in the record system.
+The following new FFB documentation is documented in the record system.
 
-##### CarePlanEvaluation
+##### CareEvaluation
 
 {:class="grid"}
 | Evaluation | Vurderingsdato |
@@ -315,7 +308,7 @@ A delivery report is generated containing:
 - Information gathering (new)
     - Reference to service request
 - Care plan (updated)
-    - Reference to new care plan evaluation (updated)
+    - Reference to new care evaluation (updated)
 - Service request (unchanged)
 - Interventions (updated)
 

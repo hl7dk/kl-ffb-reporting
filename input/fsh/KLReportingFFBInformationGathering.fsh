@@ -38,7 +38,7 @@ Description: "Assessment of the citizen"
 * finding.basis ..0
 * investigation ..1 MS
 * investigation.item MS
-* investigation.item only Reference(KLReportingFFBCarePlanEvaluation)
+* investigation.item only Reference(KLReportingFFBCareEvaluation)
 
 
 * code.coding ^short = "[DK] oplysningsaktivitetstype"
