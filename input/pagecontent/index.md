@@ -179,3 +179,7 @@ The gateway is not able to validate immediately whether the reported data confli
 The implementation guide contains a number of examples for each profile used in a delivery report. See [Example](example.html) for a set of examples of complete delivery reports.
 
 __Note:__ Must support markers are used according to the FHIR specification and means that it shall be included in the report if the information is available. A precise definition of what available means in each case is described in the definition of the element.
+
+### Contact
+
+Questions regarding the business requirements may be directed to <ffb@kombit.dk>, and questions regarding TouchStone testscripts may be directed to <fhir@medcom.dk>.
