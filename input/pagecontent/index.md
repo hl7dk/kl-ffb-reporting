@@ -182,4 +182,4 @@ __Note:__ Must support markers are used according to the FHIR specification and 
 
 ### Contact
 
-Questions regarding the business requirements may be directed to <ffb@kombit.dk>, and questions regarding TouchStone testscripts may be directed to <fhir@medcom.dk>.
+Questions regarding the business requirements may be directed to <ffb@kombit.dk>, and questions regarding TouchStone testscripts may be directed to <fhir@medcom.dk>. 
