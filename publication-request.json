@@ -1,0 +1,14 @@
+{
+    "package-id" : "kl.dk.fhir.ffbreporting",
+    "version" : "1.0.0",
+    "path" : "http://fhir.kl.dk/ffbreporting/1.0.0",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "Releases",
+    "descmd": "@release-notes.md",
+    "title" : "KLFFBReporting",
+    "first" : true,
+    "ci-build" : "https://build.fhir.org/ig/hl7dk/kl-ffb-reporting/",
+    "category" : "Clinical Registries",
+    "introduction" : "FFB Reporting makes it possible to report social care data from a Danish vendor specific solutions to a common gateway."
+  }
