@@ -4,3 +4,4 @@ This implementation guide describes the delivery of social data from the vendor 
 Get access to CI build here: https://build.fhir.org/ig/hl7dk/kl-ffb-reporting/
 
 
+
