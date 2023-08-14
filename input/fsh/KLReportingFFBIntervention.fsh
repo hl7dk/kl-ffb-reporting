@@ -79,4 +79,4 @@ Description: "Intervention in a reported care plan"
 // Invariant: kl-reporting-ffb-intervention-1
 // Description: "Intervention must have a follow-up encounter if end date is not set"
 // Severity: #error
-// Expression: "(period.end.exists()) or extension('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-follow-up-date-extension').exists()"
+// Expression: "(period.end.exists()) or extension('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-follow-up-date-extension').exists()"

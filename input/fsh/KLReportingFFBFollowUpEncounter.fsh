@@ -14,7 +14,7 @@ Description: "Encounter for following up on care plans and interventions"
 * class.userSelected ..0
 * classHistory ..0
 * type 1..1 MS
-* type from http://kl.dk/fhir/common/caresocial/ValueSet/KLEncounterTypes (required)
+* type from http://fhir.kl.dk/term/ValueSet/KLEncounterTypes (required)
 * type.coding 1..1 MS
 * type.coding = $KLCommon#9f03dfbb-7a97-45a5-94db-d4c3501714a9
 * type.coding.version ..0

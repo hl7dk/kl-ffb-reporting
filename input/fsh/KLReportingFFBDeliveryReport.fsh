@@ -32,19 +32,19 @@ Invariant: kl-reporting-ffb-delivery-report-1
 Description: "All Conditon resources shall conform to either kl-reporting-ffb-condition or kl-reporting-ffb-targetGroup profile"
 Severity: #error
 Expression: "entry.ofType(Condition).all(
-    resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-condition')
- or resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-targetGroup'))"
+    resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-condition')
+ or resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-targetGroup'))"
 
 Invariant: kl-reporting-ffb-delivery-report-2
 Description: "All CarePlan resources shall conform to either kl-reporting-ffb-carePlan or kl-reporting-ffb-intervention profile"
 Severity: #error
 Expression: "entry.ofType(CarePlan).all(
-    resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-carePlan')
- or resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-intervention'))"
+    resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-carePlan')
+ or resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-intervention'))"
 
 Invariant: kl-reporting-ffb-delivery-report-3
 Description: "All CarePlan resources shall conform to either kl-reporting-ffb-carePlan or kl-reporting-ffb-intervention profile"
 Severity: #error
 Expression: "entry.ofType(Observation).all(
-    resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-careEvaluation')
- or resource.conformsTo('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-followUp'))"
+    resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-careEvaluation')
+ or resource.conformsTo('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-followUp'))"

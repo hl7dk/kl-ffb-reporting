@@ -73,12 +73,12 @@ Description: "FFB care plan"
 Invariant: kl-reporting-ffb-care-plan-1
 Description: "CarePlan must have a follow-up encounter if ordered and not completed"
 Severity: #error
-Expression: "(intent != 'order') or (status = 'completed') or extension('http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-follow-up-date-extension').exists()"
+Expression: "(intent != 'order') or (status = 'completed') or extension('http://fhir.kl.dk/ffbreporting/StructureDefinition/kl-reporting-ffb-follow-up-date-extension').exists()"
 
 Invariant: kl-reporting-ffb-care-plan-2
 Description: "CarePlan shall address no more than one condition with rank 1"
 Severity: #error
-Expression: "addresses.where(extension('http://kl.dk/fhir/common/caresocial/StructureDefinition/ConditionRank').valuePositiveInt = '1').count() < 2"
+Expression: "addresses.where(extension('http://fhir.kl.dk/core/StructureDefinition/ConditionRank').valuePositiveInt = '1').count() < 2"
 
 Invariant: kl-reporting-ffb-care-plan-3
 Description: "CarePlan shall contain intervention goals if ordered and not completed"

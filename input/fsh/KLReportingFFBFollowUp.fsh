@@ -24,7 +24,7 @@ Description: "Result of follow-up on a care plan"
 * performer ..0
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
-* value[x] from http://kl.dk/fhir/common/caresocial/ValueSet/KLFollowUpCodesFFB
+* value[x] from http://fhir.kl.dk/term/ValueSet/KLFollowUpCodesFFB
 * dataAbsentReason ..0
 * interpretation ..0
 * note ..0

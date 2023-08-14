@@ -15,14 +15,14 @@ Description: "Condition according to FFB"
 * verificationStatus MS
 * category ..0
 * severity MS
-* severity from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFFB
+* severity from http://fhir.kl.dk/term/ValueSet/KLSeveritiesFFB
 * severity.id ..0
 * severity.extension ..0
 * severity.text ..0
 * code 1.. MS
 * code.id ..0
 * code.extension ..0
-* code from http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionCodesFFB (required)
+* code from http://fhir.kl.dk/term/ValueSet/KLConditionCodesFFB (required)
 * code.text ..0
 * bodySite ..0
 * subject 1.. MS
@@ -64,5 +64,5 @@ Description: "Condition according to FFB"
 Invariant: kl-reporting-ffb-condition-1
 Description: "Severity is mandatory for condition codes of 'Aktivitet og Deltagelse' and not allowed for other condition codes"
 Severity: #error
-Expression: "(severity.exists() and code.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionADCodesFFB')) or
-    (severity.exists().not() and code.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionADCodesFFB').not())"
+Expression: "(severity.exists() and code.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionADCodesFFB')) or
+    (severity.exists().not() and code.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionADCodesFFB').not())"

@@ -182,3 +182,15 @@ __Note:__ Must support markers are used according to the FHIR specification and 
 
 ### Contact
 Questions regarding the business requirements may be directed to <ffb@kombit.dk>, and questions regarding TouchStone testscripts may be directed to <fhir@medcom.dk>. 
+
+### Dependencies
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+{% include cross-version-analysis.xhtml %}
+
+### Global Profiles
+{% include globals-table.xhtml %}
+
+### IP Statements
+{% include ip-statements.xhtml %}

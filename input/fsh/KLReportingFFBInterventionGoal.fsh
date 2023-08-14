@@ -24,10 +24,10 @@ Description: "Goal related to an intervention for a citizen"
    severitySlice 1..1 and changeValueSlice 1..1
 * target[changeValueSlice] MS
 * target[changeValueSlice].detailCodeableConcept MS
-* target[changeValueSlice].detailCodeableConcept from http://kl.dk/fhir/common/caresocial/ValueSet/KLChangeValueCodesFFB
+* target[changeValueSlice].detailCodeableConcept from http://fhir.kl.dk/term/ValueSet/KLChangeValueCodesFFB
 * target[severitySlice] MS
 * target[severitySlice].detailCodeableConcept MS
-* target[severitySlice].detailCodeableConcept from http://kl.dk/fhir/common/caresocial/ValueSet/KLSeveritiesFFB
+* target[severitySlice].detailCodeableConcept from http://fhir.kl.dk/term/ValueSet/KLSeveritiesFFB
 * target.measure from KLTargetMeasureCodes (extensible)
 * target[severitySlice].measure = $KLCommon#66959f77-6e2a-4574-8423-3ff097f8b9fa //"funktionsevneniveau"
 * target[changeValueSlice].measure = $KLCommon#90c48f03-f194-4b2f-ad7d-6cba1069ae48 //"måltype"
@@ -60,9 +60,9 @@ Description: "Goal related to an intervention for a citizen"
 Invariant: kl-reporting-ffb-intervention-goal-1
 Description: "Intervention goal shall only address conditions under 'Aktivitet og Deltagelse'"
 Severity: #error
-Expression: "addresses.all(reference.resolve().code.memberOf('http://kl.dk/fhir/common/caresocial/ValueSet/KLConditionADCodesFFB'))"
+Expression: "addresses.all(reference.resolve().code.memberOf('http://fhir.kl.dk/term/ValueSet/KLConditionADCodesFFB'))"
 
 Invariant: kl-reporting-ffb-intervention-goal-2
 Description: "InterventionGoal shall address excactly one condition with rank 1"
 Severity: #error
-Expression: "addresses.where(extension('http://kl.dk/fhir/common/caresocial/StructureDefinition/ConditionRank').valuePositiveInt = '1').count() = 1"
+Expression: "addresses.where(extension('http://fhir.kl.dk/term/StructureDefinition/ConditionRank').valuePositiveInt = '1').count() = 1"
