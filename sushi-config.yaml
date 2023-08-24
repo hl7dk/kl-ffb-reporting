@@ -5,9 +5,8 @@
 id: kl.dk.fhir.ffbreporting
 canonical: http://fhir.kl.dk/ffbreporting
 name: KLFFBReporting
-title: Please provide a good title
-description: Please provide a good description
-status: active # draft # active
+title: "Implementation Guide for FFB reporting (FFB uddatasæt)"
+description: Danish municipalities implementation guide for FFB reporting. A standard for reporting social information from citizen journals to a gateway. The aim is to use the data in population based studies and management information systems.
 version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
